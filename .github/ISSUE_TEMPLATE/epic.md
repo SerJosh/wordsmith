@@ -11,8 +11,8 @@ As a **role** I can **capability** so that **received benefit**
 
 ## Potential User Stories
 
-- 1
+1.
 
-- 2
+2.
 
-- 3
+3.
