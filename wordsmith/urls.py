@@ -19,6 +19,7 @@ from django.urls import path
 from stories.views import my_story
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('stories/', my_story, name='stories'),
+    path('admin/', admin.site.urls),
+    
 ]
