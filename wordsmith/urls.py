@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from stories.views import home
+from stories.views import index
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', index, name='index'),
     # path('stories/', my_story, name='stories'),
     path('admin/', admin.site.urls),
     
