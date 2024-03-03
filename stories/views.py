@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 # Create your views here.
 
-def my_story(request):
-    return HttpResponse("Hello, story!")
+def home(request):
+    return render(request, 'home.html')
