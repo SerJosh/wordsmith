@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ '8000-serjosh-wordsmith-hts3me9pyj5.ws-eu108.gitpod.io',
                 '.herokuapp.com']
@@ -59,13 +59,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'joshronan25@gmail.com'
-EMAIL_HOST_PASSWORD = 'csel fccr ggwe yyem'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 
 AUTHENTICATION_BACKENDS = [
@@ -168,13 +162,23 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+if DEBUG == True:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'wordsmith@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+    DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 
 # ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
