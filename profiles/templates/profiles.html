@@ -1,1 +1,18 @@
-<H1>You are here</H1>
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>Profile Page</h1>
+    <h2>Name: {{ user }}</h2>
+    <h2>Email: {{ user.email }}</h2>
+    <h3>Happy Learning</h3>
+</body>
+</html>
+
+{% endblock %}
