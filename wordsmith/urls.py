@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from stories.views import index
 from profiles.views import my_profile
+from profiles.views import delete_profile
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
+    path('delete_profile/', delete_profile, name='delete_profile'),
     path('profiles/', my_profile, name='profiles'),
     path('summernote/', include('django_summernote.urls')),
     path('', index, name='index'),
