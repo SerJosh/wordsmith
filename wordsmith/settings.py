@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'stories',
+    'profiles'
 ]
 
 

@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from stories.views import index
+from profiles.views import my_profile
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
+    path('profiles/', my_profile, name='profiles'),
     path('summernote/', include('django_summernote.urls')),
     path('', index, name='index'),
     # path('stories/', my_story, name='stories'),  
