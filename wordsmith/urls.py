@@ -29,5 +29,6 @@ urlpatterns = [
     path('profiles/', my_profile, name='profiles'),
     path('summernote/', include('django_summernote.urls')),
     path('', index, name='index'),
+    path('', include(('stories.urls', 'stories'), namespace='stories'))
     # path('stories/', my_story, name='stories'),  
 ]
