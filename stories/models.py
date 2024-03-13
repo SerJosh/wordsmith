@@ -13,6 +13,7 @@ class WordsmithUser (models.Model):
 
 class Story(models.Model):
     Title = models.CharField('Title', max_length=20)
+    Auther = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     Blurb = models.CharField('Blurb', max_length=200, blank=True)
     Content = models.TextField('Short Story', max_length=50000)
 
