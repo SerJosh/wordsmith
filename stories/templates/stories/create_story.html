@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form method="POST" action="." enctype="multipart/form-data">
+<center>
+<h2>Make your story come true</h1>
+    {% if submitted %}
+    You Story has been Created Successfully!
+    {% else %}
+
+    
+<form method="POST" action="" enctype="multipart/form-data">
     {% csrf_token %}
-{{ form.as_p }}
-<div>
-    <button type="submit">Create</button>
-</div>
+  {{ form.as_p }}
+<input type="submit" value="Create" class="btn btn-secondary">
 </form>
+{% endif %}
+</center>
 {% endblock content %}

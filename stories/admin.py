@@ -9,5 +9,6 @@ admin.site.register(WordsmithUser)
 
 @admin.register(Story)
 class StoryAdmin(admin.ModelAdmin):
+    list_display = ('Title', 'Auther',)
     ordering = ('Title',)
     search_fields = ('Title',)
