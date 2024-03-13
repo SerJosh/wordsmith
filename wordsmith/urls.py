@@ -15,8 +15,8 @@ urlpatterns = [
     path('delete_profile/', delete_profile, name='delete_profile'),
     path('profiles/', my_profile, name='profiles'),
     path('summernote/', include('django_summernote.urls')),
-    path('', index, name='index'),
-    path('', include('stories.urls')),  
+    # path('', index, name='index'),
+    path('', include('stories.urls'), name="stories-urls"),  
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

@@ -8,9 +8,17 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1>Home Page</h1>
-    <p>This page is rendered as a Django Template</p>
-    <h3>Happy Learning</h3>
+    <center>
+    <h1>Stories</h1>
+    <br>
+    {% for story in story_list %}
+    <h2>{{ story.Title }}</h2>
+    <p><strong>{{ story.Blurb }}</strong></p>
+    <br>
+    <!-- <p>{{ story.Content }}</p> -->
+    {% endfor %}
+    
+</center>
 </body>
 <footer class="footer mt-auto py-3 dark-bg">
     <p class="m-0 text-center text-black">Made by Ser Josh</p>
