@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # from django.views.generic.edit import CreateView
 from .models import Story
 # from .forms import NameForm
@@ -8,6 +8,16 @@ from .forms import StoryForm
 
 
 # Create your views here.
+
+def edit_story(request, story_id):
+    story_edit = Story.objects.get(pk=story_id)
+    form = StoryForm(request.POST or None, instance=story_edit)
+    if form.is_valid():
+            form.save()
+            return redirect('index')
+    return render(request, 'stories/edit_story.html', 
+    {'story_edit': story_edit,
+    'form': form})
 
 def view_story(request, story_id):
     story_view = Story.objects.get(pk=story_id)

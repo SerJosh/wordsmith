@@ -10,9 +10,12 @@
 <body>
     <center>
     
-    <h2>{{ story_view.Title }}</h2>
-    <h2>{{ story_view.Blurb }}</h2>
-    <h2>{{ story_view.Content | safe  }}</h2>
+    <h1><strong>{{ story_view.Title }}</strong></h1>
+    <h3>By {{ story_view.Auther }}</h3>
+    <br><br>
+    <p><strong>{{ story_view.Blurb }}</strong></p>
+    <br>
+    <p>{{ story_view.Content | safe  }}</p>
     
     
     

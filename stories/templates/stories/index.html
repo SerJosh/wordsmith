@@ -14,10 +14,13 @@
     {% for story in story_list %}
     <a href="{% url 'view-story' story.id %}"><h2>{{ story.Title }}</h2></a>
     <p><strong>{{ story.Blurb }}</strong></p>
+    <a href="{% url 'edit-story' story.id %}"><button>edit</button></a>
     <br>
+    <br>
+    
     <!-- <p>{{ story.Content }}</p> -->
     {% endfor %}
-    
+   
 </center>
 </body>
 <footer class="footer mt-auto py-3 dark-bg">
