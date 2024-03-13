@@ -9,6 +9,11 @@ from .forms import StoryForm
 
 # Create your views here.
 
+def view_story(request, story_id):
+    story_view = Story.objects.get(pk=story_id)
+    return render(request, 'stories/view_story.html', 
+    {'story_view': story_view})
+
 def all_stories(request):
     story_list = Story.objects.all()
     return render(request, 'stories/index.html', 
@@ -17,6 +22,7 @@ def all_stories(request):
 
 def index(request):
     return render(request, 'stories/index.html', {})
+
 
 def create_story(request):
     submitted = False
@@ -31,4 +37,8 @@ def create_story(request):
             submitted = True
     return render(request, 'stories/create_story.html', 
     {'form': form, 'submitted': submitted})
+
+
+
+
 

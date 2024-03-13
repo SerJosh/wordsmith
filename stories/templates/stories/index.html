@@ -12,7 +12,7 @@
     <h1>Stories</h1>
     <br>
     {% for story in story_list %}
-    <h2>{{ story.Title }}</h2>
+    <a href="{% url 'view-story' story.id %}"><h2>{{ story.Title }}</h2></a>
     <p><strong>{{ story.Blurb }}</strong></p>
     <br>
     <!-- <p>{{ story.Content }}</p> -->

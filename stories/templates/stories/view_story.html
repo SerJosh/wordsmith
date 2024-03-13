@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Story Page</title>
+</head>
+<body>
+    <center>
+    
+    <h2>{{ story_view.Title }}</h2>
+    <h2>{{ story_view.Blurb }}</h2>
+    <h2>{{ story_view.Content | safe  }}</h2>
+    
+    
+    
+    
+</center>
+</body>
+
+</html>
+
+{% endblock %}
