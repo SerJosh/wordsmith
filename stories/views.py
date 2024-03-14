@@ -9,6 +9,14 @@ from .forms import StoryForm
 
 # Create your views here.
 
+# Delete Story
+def delete_story(request, story_id):
+    story_delete = Story.objects.get(pk=story_id)
+    story_delete.delete()
+    return redirect('index')
+
+
+
 def edit_story(request, story_id):
     story_edit = Story.objects.get(pk=story_id)
     form = StoryForm(request.POST or None, instance=story_edit)
@@ -19,13 +27,15 @@ def edit_story(request, story_id):
     {'story_edit': story_edit,
     'form': form})
 
+
 def view_story(request, story_id):
     story_view = Story.objects.get(pk=story_id)
     return render(request, 'stories/view_story.html', 
     {'story_view': story_view})
 
+
 def all_stories(request):
-    story_list = Story.objects.all()
+    story_list = Story.objects.all().order_by('Title')
     return render(request, 'stories/index.html', 
     {'story_list': story_list})
 
