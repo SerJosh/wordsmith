@@ -13,6 +13,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create_story/', create_story, name='create_story'),
     path('delete_profile/', delete_profile, name='delete_profile'),
+
+    path('profiles/', include('profiles.urls')),
+
     path('profiles/', my_profile, name='profiles'),
     path('summernote/', include('django_summernote.urls')),
     # path('', index, name='index'),

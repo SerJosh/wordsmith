@@ -8,6 +8,7 @@
     <title>Home Page</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
     <center>
     <h1>Stories</h1>
     <br>
@@ -21,8 +22,12 @@
     
     <!-- <p>{{ story.Content }}</p> -->
     {% endfor %}
-   
+    {% else %}
+    <h1>Welcom to Wordsmith!</h1>
+    <a href="{% url 'account_login' %}"> login here</a>
+    <a href="{% url 'account_signup' %}"> Register here</a>
 </center>
+{% endif %}
 </body>
 <footer class="footer mt-auto py-3 dark-bg">
     <p class="m-0 text-center text-black">Made by Ser Josh</p>
