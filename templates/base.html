@@ -48,7 +48,7 @@
 </li>
 <li class="nav-item">
     <!--Goes to Profile-->
-    <a class="nav-link {% if request.path == profiles_url %}active{% endif %}" aria-current="page" href="{% url 'profiles' %}">Profile</a>
+    <a class="nav-link {% if request.path == profiles_url %}active{% endif %}" aria-current="page" href="{% url 'view-profile' %}">Profile</a>
 </li>
 {% else %}
 <li class="nav-item">

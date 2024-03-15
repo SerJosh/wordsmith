@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
+from .models import WordsmithUser
+from .forms import ProfileForm
 # From Git
 # from django.contrib.auth import logout
 # from django.contrib.auth.models import User
@@ -29,6 +31,25 @@ from django.contrib import messages
 #             return HttpResponse(render(request, "401.html"), status=401)
 
 # Create your views here.
+
+def edit_profile(request, profile_id):
+    profile_edit = WordsmithUser.objects.get(pk=profile_id)
+    form = ProfileForm(request.POST or None, instance=profile_edit)
+    if form.is_valid():
+            form.save()
+            return redirect('view-profile')
+    return render(request, 'profiles/edit_profile.html', 
+    {'form': form,
+    'profile_edit': profile_edit})
+
+
+
+def user_profile(request):
+    profile = WordsmithUser.objects.all()
+    return render(request, 'profiles/profiles.html',
+    {'profiles': profile})
+
+
 def my_profile(request):
     return render(request, 'profiles.html')
 

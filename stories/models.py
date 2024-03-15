@@ -4,12 +4,12 @@ from django.db import models
 
 
 # Create your models here.
-class WordsmithUser (models.Model):
-    name = models.CharField(max_length=20)
-    email = models.EmailField('User Email', max_length=40)
+# class WordsmithUser (models.Model):
+#     name = models.CharField(max_length=20)
+#     email = models.EmailField('User Email', max_length=40)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 class Story(models.Model):
     Title = models.CharField('Title', max_length=20)
