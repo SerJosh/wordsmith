@@ -11,24 +11,13 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-<div class="index-body">
+<div class="index-body" style="background-image: url('static/images/book.avif'); background-size: cover;">
     <div class="mx-auto">
     <h1 class="text-center">Stories</h1>
   </div>
-    <br>
     {% for story in stories %}
-    <!-- <h2>{{ story.Title }}</h2> -->
-    <!-- {% if story.Story_Cover %}
-    <img src="{{ story.Story_Cover.url }}" alt="">
-    {% endif %} -->
-    <!-- <p><strong>{{ story.Blurb }}</strong></p> -->
-    <!-- <a href="{% url 'view-story' story.id %}"><button>view</button></a>
-    <a href="{% url 'edit-story' story.id %}"><button>edit</button></a>
-    <a href="{% url 'delete-story' story.id %}"><button>delete</button></a>
-    <br>
-    <br> -->
-
-    <div class="card mx-auto welcome-card" style="width: 20rem;">
+    <div class=" mx-auto big-story-card" style="width: 25rem;" >
+    <div class="card mx-auto story-card " style="width: 20rem;">
       <div class="card-body mx-auto">
         <h5 class="card-title">{{ story.Title }}</h5>
       </div>
@@ -44,23 +33,12 @@
         <a href="{% url 'edit-story' story.id %}"class="btn btn-dark btn-welcome">Edit</a>
         <a href="{% url 'delete-story' story.id %}"class="btn btn-dark btn-welcome">Delete</a>
       </div>
-    </div>
-
-    <!-- <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <a href="{% url 'view-story' story.id %}"><h5 class="card-title">{{ story.Title }}</h5></a>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-          <p class="card-text"><strong>{{ story.Blurb }}</strong></p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div> -->
-    
-    <!-- <p>{{ story.Content }}</p> -->
+  </div>
+  </div>
     {% endfor %}
 
     <div class="">
-      <ul class="pagination justify-content-center ">
+      <ul class="pagination justify-content-center paginator">
     {% if stories.has_previous %}
     <li class="page-item bg-dark"><a href="?page=1" class="page-link bg-dark text-white">&laquo First</a></li>
 
@@ -80,7 +58,6 @@
 {% endif %}
 </ul>
 </div>
-  </div>
     {% else %}
     <div class="vh-100 container-fluid" style="background-image: url('static/images/book.avif'); background-size: cover;">
         <div class="card text-center mb-3 mx-auto p-2 welcome-card " style="width: 50rem;">
@@ -94,7 +71,6 @@
           </div>
 
 {% endif %}
-</div>
 </div>
 </body>
 </html>
