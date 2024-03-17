@@ -11,19 +11,40 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-    <h1>Stories</h1>
+<div class="index-body">
+    <div class="mx-auto">
+    <h1 class="text-center">Stories</h1>
+  </div>
     <br>
-    {% for story in story_list %}
-    <h2>{{ story.Title }}</h2></a>
-    {% if story.Story_Cover %}
+    {% for story in stories %}
+    <!-- <h2>{{ story.Title }}</h2> -->
+    <!-- {% if story.Story_Cover %}
     <img src="{{ story.Story_Cover.url }}" alt="">
-    {% endif %}
-    <p><strong>{{ story.Blurb }}</strong></p>
-    <a href="{% url 'view-story' story.id %}"><button>view</button></a>
+    {% endif %} -->
+    <!-- <p><strong>{{ story.Blurb }}</strong></p> -->
+    <!-- <a href="{% url 'view-story' story.id %}"><button>view</button></a>
     <a href="{% url 'edit-story' story.id %}"><button>edit</button></a>
     <a href="{% url 'delete-story' story.id %}"><button>delete</button></a>
     <br>
-    <br>
+    <br> -->
+
+    <div class="card mx-auto welcome-card" style="width: 20rem;">
+      <div class="card-body mx-auto">
+        <h5 class="card-title">{{ story.Title }}</h5>
+      </div>
+      {% if story.Story_Cover %}
+      <img src="{{ story.Story_Cover.url }}" class="card-img-top" alt="...">
+      {% endif %}
+      
+        <div class="card-body mx-auto">
+        <p class="card-text text-break">{{ story.Blurb }}</p>
+      </div>
+      <div class="card-body mx-auto">
+        <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">view</a>
+        <a href="{% url 'edit-story' story.id %}"class="btn btn-dark btn-welcome">Edit</a>
+        <a href="{% url 'delete-story' story.id %}"class="btn btn-dark btn-welcome">Delete</a>
+      </div>
+    </div>
 
     <!-- <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -37,11 +58,34 @@
     
     <!-- <p>{{ story.Content }}</p> -->
     {% endfor %}
+
+    <div class="">
+      <ul class="pagination justify-content-center ">
+    {% if stories.has_previous %}
+    <li class="page-item bg-dark"><a href="?page=1" class="page-link bg-dark text-white">&laquo First</a></li>
+
+      <li class="page-item "><a href="?page={{ stories.previous_page_number }}" class="page-link bg-dark text-white">Previous</a></li>
+	
+{% endif %}
+
+<li class="page-item disabled"><a href="#" class="page-link bg-dark text-white">
+  Page {{ stories.number }} of {{ stories.paginator.num_pages }}
+</a></li>
+
+{% if stories.has_next %}
+<li class="page-item"><a href="?page={{ stories.next_page_number }}" class="page-link bg-dark text-white">Next</a></li>
+
+	<li class="page-item"></li><a href="?page={{ stories.paginator.num_pages }}" class="page-link bg-dark text-white">Last &raquo</a></li>
+
+{% endif %}
+</ul>
+</div>
+  </div>
     {% else %}
     <div class="vh-100 container-fluid" style="background-image: url('static/images/book.avif'); background-size: cover;">
         <div class="card text-center mb-3 mx-auto p-2 welcome-card " style="width: 50rem;">
             <div class="card-body d-grid gap-4 col-3 mx-auto">
-              <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome clip-path">Login</a>
+              <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Login</a>
               <br>
               <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome">Register</a>
               <br>
@@ -50,6 +94,7 @@
           </div>
 
 {% endif %}
+</div>
 </div>
 </body>
 </html>

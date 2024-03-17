@@ -4,6 +4,7 @@ from .models import Story
 # from .forms import NameForm
 from django.http import HttpResponseRedirect
 from .forms import StoryForm
+from django.core.paginator import Paginator
 
 
 
@@ -36,8 +37,13 @@ def view_story(request, story_id):
 
 def all_stories(request):
     story_list = Story.objects.all().order_by('Title')
+    p = Paginator(Story.objects.all(), 1)
+    page = request.GET.get('page')
+    stories = p.get_page(page)
+    # nums = "a" * venues.paginator.num_pages
     return render(request, 'stories/index.html', 
-    {'story_list': story_list})
+    {'story_list': story_list,
+    'stories': stories,})
 
 
 def index(request):
