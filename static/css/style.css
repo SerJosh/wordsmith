@@ -13,4 +13,30 @@
 
 .btn-welcome {
     background-color:rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.0);
+    clip-path: polygon(
+        15px 0,
+        calc(100% - 15px) 0,
+        100% 15px,
+        100% calc(100% - 15px),
+        calc(100% - 15px) 100%,
+        15px 100%,
+        0 calc(100% - 15px),
+        0 15px);
+    font-size: 15px;
 }
+
+/* #btn-welcome-id {
+    font-weight: bold;
+    font-size: 4em;
+    transition: all 500ms;
+}
+
+#btn-welcome-id:hover {
+    font-size:88px;
+    font-size-adjust: 20px;
+} */
+
+.btn-welcome:hover {
+    transform: scale(1.5);
+  }
