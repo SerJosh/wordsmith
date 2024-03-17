@@ -1,0 +1,16 @@
+/* .big {color: red;} */
+/* .book-cover {
+    background-image: url('images/bookstars.jpg'); 
+    background-size: cover;
+} */
+
+.welcome-card {
+    top: 10%;
+    background-color:rgba(0, 0, 0, 0.0);
+    border-color: rgba(0, 0, 0, 0.0);
+    color:white;
+}
+
+.btn-welcome {
+    background-color:rgba(0, 0, 0, 0.1);
+}

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!DOCTYPE html>
@@ -9,34 +11,44 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-    <center>
     <h1>Stories</h1>
     <br>
     {% for story in story_list %}
-    <a href="{% url 'view-story' story.id %}"><h2>{{ story.Title }}</h2></a>
+    <h2>{{ story.Title }}</h2></a>
     <p><strong>{{ story.Blurb }}</strong></p>
+    <a href="{% url 'view-story' story.id %}"><button>view</button></a>
     <a href="{% url 'edit-story' story.id %}"><button>edit</button></a>
     <a href="{% url 'delete-story' story.id %}"><button>delete</button></a>
     <br>
     <br>
+
+    <!-- <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <a href="{% url 'view-story' story.id %}"><h5 class="card-title">{{ story.Title }}</h5></a>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+          <p class="card-text"><strong>{{ story.Blurb }}</strong></p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div> -->
     
     <!-- <p>{{ story.Content }}</p> -->
     {% endfor %}
     {% else %}
-    <h1>Welcom to Wordsmith!</h1>
-    <a href="{% url 'account_login' %}"> login here</a>
-    <a href="{% url 'account_signup' %}"> Register here</a>
-</center>
+    <div class="vh-100 container-fluid" style="background-image: url('static/images/book.avif'); background-size: cover;">
+        <div class="card text-center mb-3 mx-auto p-2 welcome-card " style="width: 50rem;">
+            <div class="card-body d-grid gap-4 col-3 mx-auto">
+              <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">login here</a>
+              <br>
+              <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome"> Register here</a>
+              <br>
+              <a href="#" class="btn btn-dark btn-welcome">About</a>
+            </div>
+          </div>
+
 {% endif %}
+</div>
 </body>
-<footer class="footer mt-auto py-3 dark-bg">
-    <p class="m-0 text-center text-black">Made by Ser Josh</p>
-    <p class="m-0 text-center text-black">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-        <i class="fab fa-twitter-square ms-3"></i>
-        <i class="fab fa-instagram-square ms-3"></i>
-        <i class="fab fa-youtube-square ms-3"></i>
-    </p>
-</footer>
 </html>
 
 {% endblock %}

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from .models import WordsmithUser
 from .forms import ProfileForm
+from django.http import HttpResponseRedirect
 # From Git
 # from django.contrib.auth import logout
 # from django.contrib.auth.models import User
@@ -31,6 +32,21 @@ from .forms import ProfileForm
 #             return HttpResponse(render(request, "401.html"), status=401)
 
 # Create your views here.
+
+def create_profile(request):
+    submitted = False
+    if request.method == "POST":
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/create_profile?submitted=True')
+    else:
+        form = ProfileForm
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'profiles/create_profile.html', 
+    {'form': form, 'submitted': submitted})
+
 
 def edit_profile(request, profile_id):
     profile_edit = WordsmithUser.objects.get(pk=profile_id)
