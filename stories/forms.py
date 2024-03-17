@@ -15,7 +15,7 @@ from django_summernote.widgets import SummernoteWidget
 class StoryForm(ModelForm):
     class Meta:
         model = Story
-        fields = ('Title', 'Blurb', 'Content', )
+        fields = ('Title', 'Blurb', 'Content', 'Story_Cover', )
 
         widgets = {
             'Title': forms.TextInput(attrs={'class': 'form-control'}),

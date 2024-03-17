@@ -47,7 +47,7 @@ def index(request):
 def create_story(request):
     submitted = False
     if request.method == "POST":
-        form = StoryForm(request.POST)
+        form = StoryForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/create_story?submitted=True')

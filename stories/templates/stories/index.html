@@ -15,6 +15,9 @@
     <br>
     {% for story in story_list %}
     <h2>{{ story.Title }}</h2></a>
+    {% if story.Story_Cover %}
+    <img src="{{ story.Story_Cover.url }}" alt="">
+    {% endif %}
     <p><strong>{{ story.Blurb }}</strong></p>
     <a href="{% url 'view-story' story.id %}"><button>view</button></a>
     <a href="{% url 'edit-story' story.id %}"><button>edit</button></a>
