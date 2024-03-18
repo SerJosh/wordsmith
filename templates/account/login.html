@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-
-<div class="container">
+<div class="login-a">
+<div class="container form vh-100 text-white"  style="width: 55rem;">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
@@ -31,4 +33,5 @@
         </div>
     </div>
 </div>
-{% endblock %}
+</div>  
+{% endblock content %}

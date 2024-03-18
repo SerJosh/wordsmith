@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Edit Story</title>
-</head>
-<body>
+{% block content %}
     <center>
+<div class="story-edit">
+    <div class="form text-white " style="width: 55rem;">
     <h1>Edit Story</h1>
-    <br>
     <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
@@ -18,11 +14,11 @@
     <input type="submit" value="Edit"
     class="btn btn-secondary">
 </form>
-    <!-- <p>{{ story.Content }}</p> -->
+</div>
+</div>
    
 </center>
-</body>
 
 </html>
 
-{% endblock %}
+{% endblock content %}

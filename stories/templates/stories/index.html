@@ -21,9 +21,20 @@
       <div class="card-body mx-auto">
         <h5 class="card-title">{{ story.Title }}</h5>
       </div>
-      {% if story.Story_Cover %}
+
+
+      {% if "placeholder" in story.Story_Cover.url %}
+  <img class="card-img-top" src="{% static 'images/book.png' %}"
+    alt="placeholder image">
+  {% else %}
+  <img class="card-img-top" src=" {{ story.Story_Cover.url }}"
+    alt="{{ story.Title }}">
+  {% endif %}
+
+
+      <!-- {% if story.Story_Cover %}
       <img src="{{ story.Story_Cover.url }}" class="card-img-top" alt="...">
-      {% endif %}
+      {% endif %} -->
       
         <div class="card-body mx-auto">
         <p class="card-text text-break">{{ story.Blurb }}</p>

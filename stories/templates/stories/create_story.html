@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 <center>
+  <div style="background-image: url('static/images/bookstack.webp'); background-size: cover;">
+  <div class="form text-white " style="width: 55rem;">
 <h2>Make your story come true</h1>
     {% if submitted %}
     You Story has been Created Successfully!
@@ -14,5 +18,7 @@
 <input type="submit" value="Create" class="btn btn-secondary">
 </form>
 {% endif %}
+</div>
+</div>
 </center>
 {% endblock content %}
