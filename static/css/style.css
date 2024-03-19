@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap');
+
 /* .big {color: red;} */
 /* .book-cover {
     background-image: url('images/bookstars.jpg'); 
     background-size: cover;
 } */
+
+
+h1 {
+    font-family: IM Fell English SC, sans-serif;
+}
+
 .welcome-card {
     top: 10%;
-    background-color:rgba(0, 0, 0, 0.0);
+    background-color:rgba(233, 18, 18, 0);
     border-color: rgba(0, 0, 0, 0.0);
     color:white;
 }
@@ -73,3 +81,25 @@
     background-image: url('/static/images/bookstars.jpg');
     background-size: cover;
  } */
+
+ .hero-book {
+    background-size: cover; 
+    background-position: center center; 
+    /* background-attachment: fixed; */
+    max-width: 100%; 
+    height: auto;
+ }
+
+ .w-icon {
+    font-size:25px;
+ }
+
+ .nav-menu {
+    font-size:18px;
+    font-family: IM Fell English SC, sans-serif;
+    /* margin-right:20px; */
+ }
+
+ .nav-menu a:hover {
+    border-bottom: 1px solid white;
+}
