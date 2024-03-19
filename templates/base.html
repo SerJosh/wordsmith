@@ -3,20 +3,24 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'index' as stories_url %}
+{% url 'view-profile' as profiles_url %}
+{% url 'create-story' as create_url %}
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Wordsmith</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Wordsmith, a platform to write down your stories">
+        <meta name="keywords" content="Wordsmith, writing, stories, short-stories">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+        <title>Wordsmith</title>   
     </head>
     <body class="d-flex flex-column h-100 main-bg">
         <!-- Navigation -->
@@ -33,23 +37,29 @@
                 <ul class="navbar-nav ms-auto nav-menu">
                     {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <a class="nav-link active {% if request.path == create_story_url %}active{% endif %}" aria-current="page" href="{% url 'create-story' %}">Create</a>
+                    <a class="nav-link {% if request.path == create_url %}active{% endif %}" aria-current="page" href="{% url 'create-story' %}">Create</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link {% if request.path == stories_url %}active{% endif %}" aria-current="page" href="{% url 'index' %}">Stories</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link {% if request.path == profiles_url %}active{% endif %}" href="{% url 'view-profile' %}">Profile</a>
                   </li>
-                  {% else %}
                   <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                    <a class="nav-link" aria-current="page" href="#">About</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                  </li>
+                  {% else %}
                   <li class="nav-item">
                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="#">About</a>
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
                   </li>
                   {% endif %}
                 </ul>

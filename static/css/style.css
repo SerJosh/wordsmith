@@ -1,15 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap');
 
-/* .big {color: red;} */
-/* .book-cover {
-    background-image: url('images/bookstars.jpg'); 
-    background-size: cover;
-} */
-
-
 h1 {
     font-family: IM Fell English SC, sans-serif;
 }
+
+/* base.html page */
+
+.w-icon {
+    font-size:25px;
+ }
+
+.nav-menu {
+    font-size:18px;
+    font-family: IM Fell English SC, sans-serif;
+ }
+
+ .nav-menu a:hover {
+    border-bottom: 1px solid white;
+}
+
+.copyright {
+    font-family: IM Fell English SC, sans-serif;
+}
+
+.social-links {
+    font-size: 160%;
+    clear: both;
+    word-spacing: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* !! */
 
 .welcome-card {
     top: 10%;
@@ -90,28 +113,6 @@ h1 {
     height: auto;
  }
 
- .w-icon {
-    font-size:25px;
- }
+ 
 
- .nav-menu {
-    font-size:18px;
-    font-family: IM Fell English SC, sans-serif;
-    /* margin-right:20px; */
- }
-
- .nav-menu a:hover {
-    border-bottom: 1px solid white;
-}
-
-.copyright {
-    font-family: IM Fell English SC, sans-serif;
-}
-
-.social-links {
-    font-size: 160%;
-    clear: both;
-    word-spacing: 20px;
-    color: white;
-    text-decoration: none;
-}
+ 
