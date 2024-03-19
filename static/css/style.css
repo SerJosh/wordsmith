@@ -32,7 +32,15 @@ h1 {
 }
 
 
-/* !! */
+/* index.html page */
+
+.hero-book {
+    background-size: cover; 
+    background-position: center center; 
+    /* background-attachment: fixed; */
+    max-width: 100%; 
+    height: auto;
+ }
 
 .welcome-card {
     top: 10%;
@@ -41,19 +49,8 @@ h1 {
     color:white;
 }
 
-
-.story-card {
-    top: 10%;
-    background-color:rgba(0, 0, 0, 0.0);
-    border-color: rgba(0, 0, 0, 0.0);
-    color:white;
-}
-
-.big-story-card {
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
 .btn-welcome {
+    font-family: IM Fell English SC, sans-serif;
     background-color:rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.0);
     clip-path: polygon(
@@ -65,53 +62,41 @@ h1 {
         15px 100%,
         0 calc(100% - 15px),
         0 15px);
-    font-size: 15px;
+    font-size: 20px;
 }
-
-/* #btn-welcome-id {
-    font-weight: bold;
-    font-size: 4em;
-    transition: all 500ms;
-}
-
-#btn-welcome-id:hover {
-    font-size:88px;
-    font-size-adjust: 20px;
-} */
 
 .btn-welcome:hover {
     transform: scale(1.5);
+    background-color:rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.0);
   }
 
- .index-body {
+ /* .index-body {
     background-color: black;
- }
+ } */
+
+ .story-card {
+    top: 10%;
+    background-color:rgba(0, 0, 0, 0.0);
+    border-color: rgba(0, 0, 0, 0.0);
+    color:white;
+}
 
  .paginator {
     margin-top: 1rem;
  }
 
+/* !!! */
+
+.big-story-card {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
  .form {
     background-color: rgba(0, 0, 0, 0.5);
  }
 
- /* .story-edit {
-    background-image: url('/static/images/bookstack.webp');
-    background-size: cover;
- } */
-
- /* .login-a {
-    background-image: url('/static/images/bookstars.jpg');
-    background-size: cover;
- } */
-
- .hero-book {
-    background-size: cover; 
-    background-position: center center; 
-    /* background-attachment: fixed; */
-    max-width: 100%; 
-    height: auto;
- }
+ 
 
  
 
