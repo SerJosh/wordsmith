@@ -8,10 +8,11 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
-<div class="container form vh-100 text-white"  style="width: 55rem;">
+<!-- style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;" -->
+<div class="container-fluid logged-img" style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
+<!-- <div class="container form vh-100 text-white"  style="width: 55rem;"> -->
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-1">
             <h3>{% trans "Sign In" %}</h3>
 
             <p>{% blocktrans %}Welcome back to wordsmith, to create a short story please <a class="link" href="{{ signup_url }}">sign up</a>
@@ -19,7 +20,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-1">
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -32,6 +33,6 @@
             </form>
         </div>
     </div>
-</div>
+<!-- </div> -->
 </div>  
 {% endblock content %}
