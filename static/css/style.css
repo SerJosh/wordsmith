@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap');
 
-h1 {
+h1, h3 {
     font-family: IM Fell English SC, sans-serif;
+}
+
+p {
+    font-family: Cairo, sans-serif;
 }
 
 /* base.html page */
@@ -103,14 +107,18 @@ h1 {
     /* height: vh-100 */
 }
 
+.form {
+    background-color: rgba(0, 0, 0, 0.5);
+    height:300px;
+    margin-top:2%;
+ }
+
 /* !!! */
 .big-story-card {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
- .form {
-    background-color: rgba(0, 0, 0, 0.5);
- }
+ 
 
 /* Media Queries */
 
@@ -130,7 +138,7 @@ h1 {
 
     @media screen and (max-width: 600px) {
         .logged-img {
-        height: auto;
+        height: 400px;
         width: 100%;
         }
     }
