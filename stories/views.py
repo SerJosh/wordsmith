@@ -34,8 +34,8 @@ def view_story(request, story_id):
     return render(request, 'stories/view_story.html', 
     {'story_view': story_view})
 
-
 def all_stories(request):
+    user_id = request.user.id
     story_list = Story.objects.all().order_by('Title')
     p = Paginator(Story.objects.all(), 1)
     page = request.GET.get('page')
@@ -44,6 +44,28 @@ def all_stories(request):
     return render(request, 'stories/index.html', 
     {'story_list': story_list,
     'stories': stories,})
+
+
+# def all_stories(request):
+#     user_id = request.user.id
+#     story_list = Story.objects.all().order_by('Title').filter(user_id.stories)
+#     p = Paginator(story_list, 1)
+#     page = request.GET.get('page')
+#     stories = p.get_page(page)
+#     # nums = "a" * venues.paginator.num_pages
+#     return render(request, 'stories/index.html', 
+#     {'story_list': story_list,
+#     'stories': stories,})
+# def all_stories(request):
+#     user_id = request.user.id
+#     story_list = Story.objects.filter(Auther_id=user_id).order_by('Title')
+#     p = Paginator(Story.objects.all(), 1)
+#     page = request.GET.get('page')
+#     stories = p.get_page(page)
+#     return render(request, 'stories/index.html', 
+#     {'story_list': story_list,
+#     'stories': stories,
+#     'user_id':user_id,})
 
 
 def index(request):

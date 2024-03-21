@@ -13,8 +13,8 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-    <!-- {{ request.user }} -->
-<div class="index-body hero-book" style="background-image: url({% static 'images/book.avif' %});">
+    
+<div class="index-body hero-book " style="background-image: url({% static 'images/book.avif' %});">
     <div class="mx-auto">
     <h1 class="text-center">Stories</h1>
   </div>
@@ -22,7 +22,7 @@
     <div class=" mx-auto big-story-card" style="width: 25rem;" >
     <div class="card mx-auto story-card " style="width: 20rem;">
       <div class="card-body mx-auto">
-        <h5 class="card-title">{{ story.Title }}</h5>
+        <h5 class="card-title">{{ story.Title }} {{ user }} </h5>
       </div>
 
 
@@ -73,8 +73,8 @@
 </ul>
 </div>
     {% else %}
-    <div class="vh-100 container-fluid hero-book" style="background-image: url({% static 'images/book.avif' %});">
-        <div class="card text-center mb-3 mx-auto p-2 welcome-card " style="width: 50rem;">
+    <div class="container-fluid hero-book" style="background-image: url({% static 'images/book.avif' %});">
+        <div class="card text-center mb-3 mx-auto p-2 welcome-card ">
             <div class="card-body d-grid gap-4 col-3 mx-auto">
               <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Login</a>
               <br>
