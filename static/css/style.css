@@ -166,6 +166,7 @@ p {
         .form-reg {
             width: 25rem;
             height:35rem;
+            font-size: small;
         }
     }
 
