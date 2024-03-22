@@ -113,6 +113,19 @@ p {
     margin-top:2%;
  }
 
+ .form-lg-in {
+    width: 55rem;
+ }
+
+ .form-lg-out  {
+    width: 35rem;
+ }
+
+ .form-reg {
+    width: 55rem;
+    height:25rem;
+ }
+
 /* !!! */
 .big-story-card {
     background-color: rgba(0, 0, 0, 0.5)
