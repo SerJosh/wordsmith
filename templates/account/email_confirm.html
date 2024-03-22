@@ -1,4 +1,6 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
+
+{% load static %}
 
 {% load i18n %}
 {% load account %}
@@ -7,6 +9,8 @@
 
 
 {% block content %}
+<div class="container-fluid logged-img" style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
+    <div class="container form form-verify text-white">
 <h1>{% trans "Confirm Email Address" %}</h1>
 
 {% if confirmation %}
@@ -18,7 +22,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button class="btn btn-signup right btn-dark btn-welcome" type="submit">{% trans 'Confirm' %}</button>
 </form>
 {% else %}
 <p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}</p>
@@ -31,5 +35,8 @@
 <p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}</p>
 
 {% endif %}
+
+</div>
+</div>
 
 {% endblock content %}
