@@ -139,7 +139,7 @@ p {
 
 /* Media Queries */
 
- @media screen and (max-width: 690px) {
+@media screen and (max-width: 690px) {
     .hero-book {
         /* background-size: cover; 
         background-position: center center;  */
@@ -153,20 +153,44 @@ p {
  
     }
 
-    @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
         .logged-img {
         height: 400px;
         width: 100%;
         }
+
+        .reg-img {
+            height:480px;
+        }
+
+        .form-reg {
+            width: 25rem;
+            height:35rem;
+        }
     }
 
-    @media screen and (max-width: 690px) {
+@media screen and (max-width: 690px) {
         .form-verify {
             width: 20rem;
          }
 
 
     }
+
+    @media screen and (max-width: 420px) { 
+        .form-reg {
+            width: 18rem;
+            height:35rem;
+        }
+
+        .reg-img {
+            height:auto;
+        }
+    }
+
+/* @media screen and (max-width: 690px) {
+    .reg-img
+} */
 
  
 
