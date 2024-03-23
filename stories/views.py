@@ -36,7 +36,7 @@ def view_story(request, story_id):
 
 def all_stories(request):
     user_id = request.user.id
-    story_list = Story.objects.all().order_by('Title')
+    story_list = Story.objects.all().order_by('title')
     p = Paginator(Story.objects.all(), 1)
     page = request.GET.get('page')
     stories = p.get_page(page)

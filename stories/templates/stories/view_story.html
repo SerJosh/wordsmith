@@ -10,15 +10,15 @@
 <body>
     <center>
     
-    <h1><strong>{{ story_view.Title }}</strong></h1>
-    {% if story_view.Story_Cover %}
-    <img src="{{ story_view.Story_Cover.url }}" alt="">
+    <h1><strong>{{ story_view.title }}</strong></h1>
+    {% if story_view.story_cover %}
+    <img src="{{ story_view.story_cover.url }}" alt="">
     {% endif %}
     <h3>By {{ user }}</h3>
     <br><br>
-    <p><strong>{{ story_view.Blurb }}</strong></p>
+    <p><strong>{{ story_view.blurb }}</strong></p>
     <br>
-    <p>{{ story_view.Content | safe  }}</p>
+    <p>{{ story_view.content | safe  }}</p>
     
     
     

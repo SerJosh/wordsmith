@@ -9,6 +9,6 @@ from .models import Story
 
 @admin.register(Story)
 class StoryAdmin(admin.ModelAdmin):
-    list_display = ('Title', 'Auther',)
-    ordering = ('Title',)
-    search_fields = ('Title',)
+    list_display = ('title', 'auther',)
+    ordering = ('title',)
+    search_fields = ('title',)

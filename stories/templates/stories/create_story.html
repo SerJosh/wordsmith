@@ -3,16 +3,16 @@
 {% load static %}
 
 {% block content %}
-<center>
-  <div style="background-image: url({% static 'images/bookstack.webp' %}); background-size: cover;">
-  <div class="form text-white " style="width: 55rem;">
+  <div class="hero-create" style="background-image: url({% static 'images/bookstack.webp' %});">
+  <!-- <div class="create-form mx-auto text-white " style="width: 55rem;"> -->
+    <div class="text-white create-div mx-auto"> 
 <h2>Make your story come true</h1>
     {% if submitted %}
     You Story has been Created Successfully!
     {% else %}
 
     
-<form method="POST" action="" enctype="multipart/form-data">
+<form class="actual-crate-form" method="POST" action="" enctype="multipart/form-data">
     {% csrf_token %}
   {{ form.as_p }}
 <input type="submit" value="Create" class="btn btn-secondary">
@@ -20,5 +20,4 @@
 {% endif %}
 </div>
 </div>
-</center>
 {% endblock content %}
