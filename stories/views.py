@@ -20,7 +20,7 @@ def delete_story(request, story_id):
 
 def edit_story(request, story_id):
     story_edit = Story.objects.get(pk=story_id)
-    form = StoryForm(request.POST or None, instance=story_edit)
+    form = StoryForm(request.POST or None,request.FILES or None, instance=story_edit)
     if form.is_valid():
             form.save()
             return redirect('index')

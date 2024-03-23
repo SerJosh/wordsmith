@@ -3,21 +3,18 @@
 {% load static %}
 
 {% block content %}
-    <center>
-<div style="background-image: url({% static 'images/bookstack.webp' %}); background-size: cover;">
-    <div class="form text-white " style="width: 55rem;">
-    <h1>Edit Story</h1>
+<div class="hero-create" style="background-image: url({% static 'images/bookstack.webp' %})">
+    <div class="text-white create-div mx-auto ">
+    <h2>Edit Story</h2>
     <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <br>
     <input type="submit" value="Edit"
-    class="btn btn-secondary">
+    class="btn btn-signup right btn-dark btn-welcome">
 </form>
 </div>
 </div>
-   
-</center>
 
 </html>
 

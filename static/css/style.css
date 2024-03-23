@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap');
 
-h1, h3 {
+h1, h2, h3 {
     font-family: IM Fell English SC, sans-serif;
 }
 
@@ -168,9 +168,74 @@ p {
     /* margin:0 auto */
 }
 
+.title {
+    width: 30%;
+
+}
+
+.blurb {
+    width: 50%;
+
+}
+
+.content {
+    width: 90%;
+}
+
  
 
 /* Media Queries */
+@media screen and (max-width: 750px) {
+    .title {
+        width: 40%;
+
+    }
+
+    .blurb {
+        width: 70%;
+
+    }
+
+    .content {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        width: 50%;
+
+    }
+
+    .blurb {
+        width: 80%;
+
+    }
+
+    .content {
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .title {
+        width: 70%;
+
+    }
+
+    .blurb {
+        width: 90%;
+
+    }
+
+    .content {
+        width: 100%;
+    }
+
+}
+
 
 @media screen and (max-width: 690px) {
     .hero-book {
