@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!DOCTYPE html>
@@ -10,7 +12,7 @@
 </head>
 
 <body>
-    <center>
+    <div class="read-div mx-auto">
 
         <h1><strong>{{ story_view.title }}</strong></h1>
         {% if story_view.story_cover %}
@@ -25,7 +27,7 @@
 
 
 
-    </center>
+    </div>
 </body>
 
 </html>

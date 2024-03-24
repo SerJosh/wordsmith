@@ -40,7 +40,6 @@ def all_stories(request):
     p = Paginator(Story.objects.all(), 1)
     page = request.GET.get('page')
     stories = p.get_page(page)
-    # nums = "a" * venues.paginator.num_pages
     return render(request, 'stories/index.html', 
     {'story_list': story_list,
     'stories': stories,})

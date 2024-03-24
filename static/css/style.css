@@ -90,8 +90,36 @@ p {
     color: white;
 }
 
+.st-align {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
 .paginator {
     margin-top: 1rem;
+}
+
+.del-modal {
+    display: none;
+}
+
+#hide {
+    display: none;
+}
+
+#show-delete {
+    display:'block'
+}
+
+.hidden-defence {
+    text-align: center;
+}
+
+.card-img-top {
+    width: 90%;
 }
 
 /* !!! */
@@ -166,6 +194,10 @@ p {
     /* place-items: center; */
     /* width:50%; */
     /* margin:0 auto */
+}
+
+.read-div {
+    text-align: center;
 }
 
 .title {
