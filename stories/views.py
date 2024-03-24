@@ -5,6 +5,7 @@ from .models import Story
 from django.http import HttpResponseRedirect
 from .forms import StoryForm
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User
 
 
 

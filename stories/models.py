@@ -9,7 +9,6 @@ class Story(models.Model):
     auther = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     blurb = models.TextField('Blurb', max_length=200, blank=True)
     content = models.TextField('Short Story', max_length=50000)
-## lowercase##
 
     def __str__(self):
-        return self.Title
+        return self.title

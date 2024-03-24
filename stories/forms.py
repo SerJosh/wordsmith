@@ -7,7 +7,7 @@ from .models import Story
 class StoryForm(forms.ModelForm):
     class Meta:
         model = Story
-        fields = ('title', 'blurb', 'content', 'story_cover', )
+        fields = ('title', 'auther', 'blurb', 'content', 'story_cover', )
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control title text-center mx-auto', 'placeholder':"Your Title here"}),

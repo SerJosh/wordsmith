@@ -15,10 +15,12 @@
     <div class="read-div mx-auto">
 
         <h1><strong>{{ story_view.title }}</strong></h1>
-        {% if story_view.story_cover %}
+        {% if "placeholder" in story_view.story_cover.url %}
+        <img class="img-fluid" src="{% static 'images/book.png' %}" alt="placeholder image">
+        {% else %}
         <img src="{{ story_view.story_cover.url }}" class="img-fluid" alt="Story cover">
         {% endif %}
-        <h3>By {{ user }}</h3>
+        <h3>By {{ story_view.auther }}</h3>
         <br><br>
         <p><strong>{{ story_view.blurb }}</strong></p>
         <br>

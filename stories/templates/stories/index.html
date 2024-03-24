@@ -61,7 +61,7 @@
     <div class=" mx-auto big-story-card" style="width: 20rem;">
       <div class="card mx-auto story-card " style="width: 20rem;">
         <div class="card-body mx-auto">
-          <h5 class="card-title">{{ story.title }} {{ user }} </h5>
+          <h5 class="card-title">{{ story.title }} {{ story.auther }} </h5>
         </div>
 
 
@@ -75,8 +75,10 @@
         </div>
         <div id="show-delete" class="card-body mx-auto">
           <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
+          {% if user == story.auther %}
           <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
           <button href="#" id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
+          {% endif %}
         </div>
         <div id="hide" class="hidden-defence">
           <p>Are you Sure?</p>
