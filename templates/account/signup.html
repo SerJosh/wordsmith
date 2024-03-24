@@ -7,24 +7,26 @@
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 
 {% block content %}
-<div class="container-fluid logged-img reg-img" style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
+<div class="container-fluid logged-img reg-img"
+  style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
   <div class="container form form-reg text-white">
     <div class="row ">
-<h3>{% trans "Sign Up" %}</h3>
+      <h3>{% trans "Sign Up" %}</h3>
 
-<p>{% blocktrans %}Already have an account? Then please <a class="btn btn-signup right btn-dark btn-welcome" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-</div>
-<div class="row">
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="btn btn-signup right btn-dark btn-welcome" type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-</div>
-</div>
+      <p>{% blocktrans %}Already have an account? Then please <a class="btn btn-signup right btn-dark btn-welcome"
+          href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+    </div>
+    <div class="row">
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-signup right btn-dark btn-welcome" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}

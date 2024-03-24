@@ -4,23 +4,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Create profile Page</title>
 </head>
+
 <body>
     <h2>Make your profile come true</h1>
         {% if submitted %}
         You Profile has been Created Successfully!
         {% else %}
-        
-    <form method="POST" action="." enctype="multipart/form-data">
-        {% csrf_token %}
-      {{ form.as_p }}
-    <input type="submit" value="Create" class="btn btn-secondary">
-    </form>
-    {% endif %}
-   
-    
+
+        <form method="POST" action="." enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create" class="btn btn-secondary">
+        </form>
+        {% endif %}
+
+
 </body>
 
 </html>

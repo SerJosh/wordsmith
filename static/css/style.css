@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IM+Fell+English+SC&display=swap');
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: IM Fell English SC, sans-serif;
 }
 
@@ -11,15 +13,15 @@ p {
 /* base.html page */
 
 .w-icon {
-    font-size:25px;
- }
+    font-size: 25px;
+}
 
 .nav-menu {
-    font-size:18px;
+    font-size: 18px;
     font-family: IM Fell English SC, sans-serif;
- }
+}
 
- .nav-menu a:hover {
+.nav-menu a:hover {
     border-bottom: 1px solid white;
 }
 
@@ -39,58 +41,57 @@ p {
 /* index.html page */
 
 .hero-book {
-    background-size: cover; 
-    background-position: center center; 
+    background-size: cover;
+    background-position: center center;
     /* background-attachment: fixed; */
-    max-width: 100%; 
+    max-width: 100%;
     height: 630px;
     /* height: vh-100 */
- }
+}
 
 .welcome-card {
     top: 10%;
     max-width: 100%;
-    background-color:rgba(233, 18, 18, 0);
+    background-color: rgba(233, 18, 18, 0);
     border-color: rgba(0, 0, 0, 0.0);
-    color:white;
+    color: white;
 }
 
 .btn-welcome {
     font-family: IM Fell English SC, sans-serif;
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.0);
-    clip-path: polygon(
-        15px 0,
-        calc(100% - 15px) 0,
-        100% 15px,
-        100% calc(100% - 15px),
-        calc(100% - 15px) 100%,
-        15px 100%,
-        0 calc(100% - 15px),
-        0 15px);
+    clip-path: polygon(15px 0,
+            calc(100% - 15px) 0,
+            100% 15px,
+            100% calc(100% - 15px),
+            calc(100% - 15px) 100%,
+            15px 100%,
+            0 calc(100% - 15px),
+            0 15px);
     font-size: 20px;
 }
 
 .btn-welcome:hover {
     transform: scale(1.3);
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.0);
-  }
+}
 
- /* .index-body {
+/* .index-body {
     background-color: black;
  } */
 
- .story-card {
+.story-card {
     top: 10%;
-    background-color:rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.0);
     border-color: rgba(0, 0, 0, 0.0);
-    color:white;
+    color: white;
 }
 
- .paginator {
+.paginator {
     margin-top: 1rem;
- }
+}
 
 /* !!! */
 
@@ -99,36 +100,36 @@ p {
 } */
 
 .logged-img {
-    background-size: cover; 
-    background-position: center center; 
+    background-size: cover;
+    background-position: center center;
     /* background-attachment: fixed; */
-    max-width: 100%; 
+    max-width: 100%;
     height: 600px;
     /* height: vh-100 */
 }
 
 .form {
     background-color: rgba(0, 0, 0, 0.5);
-    height:300px;
-    margin-top:2%;
- }
+    height: 300px;
+    margin-top: 2%;
+}
 
- .form-lg-in {
+.form-lg-in {
     width: 55rem;
- }
+}
 
- .form-lg-out  {
+.form-lg-out {
     width: 35rem;
- }
+}
 
- .form-reg {
+.form-reg {
     width: 55rem;
-    height:25rem;
- }
+    height: 25rem;
+}
 
- .form-verify {
+.form-verify {
     width: 25rem;
- }
+}
 
 /* !!! */
 .big-story-card {
@@ -143,24 +144,22 @@ p {
 
 .create-form {
     background-color: rgba(0, 0, 0, 0.5);
-    height:100%;
-    margin-top:2%;
+    height: 100%;
+    margin-top: 2%;
     text-align: center;
     margin: 0 auto;
     place-items: center;
     width: 55rem;
     /* width:50%; */
-    margin:0 auto
+    margin: 0 auto
 }
 
-.actual-crate-form {
-    
-}
+/* .actual-crate-form {} */
 
 .create-div {
     width: 100%;
     /* height:100%; */
-    margin-top:2%;
+    margin-top: 2%;
     text-align: center;
     /* margin: 0 auto; */
     /* place-items: center; */
@@ -182,7 +181,7 @@ p {
     width: 90%;
 }
 
- 
+
 
 /* Media Queries */
 @media screen and (max-width: 750px) {
@@ -247,45 +246,45 @@ p {
         /* background: no-repeat center center; */
         height: auto;
         width: 100%;
-     }
- 
     }
+
+}
 
 @media screen and (max-width: 600px) {
-        .logged-img {
+    .logged-img {
         height: 400px;
         width: 100%;
-        }
-
-        .reg-img {
-            height:480px;
-        }
-
-        .form-reg {
-            width: 25rem;
-            height:35rem;
-            font-size: small;
-        }
     }
+
+    .reg-img {
+        height: 480px;
+    }
+
+    .form-reg {
+        width: 25rem;
+        height: 35rem;
+        font-size: small;
+    }
+}
 
 @media screen and (max-width: 690px) {
-        .form-verify {
-            width: 20rem;
-         }
-
-
+    .form-verify {
+        width: 20rem;
     }
 
-    @media screen and (max-width: 420px) { 
-        .form-reg {
-            width: 18rem;
-            height:35rem;
-        }
 
-        .reg-img {
-            height:auto;
-        }
+}
+
+@media screen and (max-width: 420px) {
+    .form-reg {
+        width: 18rem;
+        height: 35rem;
     }
+
+    .reg-img {
+        height: auto;
+    }
+}
 
 /* @media screen and (max-width: 690px) {
     .reg-img
@@ -300,9 +299,3 @@ p {
 
 
 }
-
- 
-
- 
-
- 

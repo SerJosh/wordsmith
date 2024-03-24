@@ -7,15 +7,17 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container-fluid logged-img" style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
-<div class="container form form-lg-in text-white" >
-    <div class="row ">
+<div class="container-fluid logged-img"
+    style="background-image: url({% static 'images/bookstars.jpg' %}); background-size: cover;">
+    <div class="container form form-lg-in text-white">
+        <div class="row ">
             <h3>{% trans "Sign In" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to wordsmith.<br> If you have not, please <a class="btn btn-signup right btn-dark btn-welcome" href="{{ signup_url }}">Sign Up</a>
+            <p>{% blocktrans %}Welcome back to wordsmith.<br> If you have not, please <a
+                    class="btn btn-signup right btn-dark btn-welcome" href="{{ signup_url }}">Sign Up</a>
                 first.{% endblocktrans %}</p>
-    </div>
-    <div class="row">
+        </div>
+        <div class="row">
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -24,9 +26,10 @@
                 {% endif %}
                 <button class="btn btn-signup right btn-dark btn-welcome" type="submit">{% trans "Sign In" %}</button>
                 <!--Password Reset button-->
-                <a class="btn btn-signup right btn-dark btn-welcome" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                <a class="btn btn-signup right btn-dark btn-welcome"
+                    href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
             </form>
+        </div>
     </div>
 </div>
-</div>  
 {% endblock content %}

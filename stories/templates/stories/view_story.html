@@ -4,26 +4,28 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Story Page</title>
 </head>
+
 <body>
     <center>
-    
-    <h1><strong>{{ story_view.title }}</strong></h1>
-    {% if story_view.story_cover %}
-    <img src="{{ story_view.story_cover.url }}" class="img-fluid" alt="Story cover">
-    {% endif %}
-    <h3>By {{ user }}</h3>
-    <br><br>
-    <p><strong>{{ story_view.blurb }}</strong></p>
-    <br>
-    <p>{{ story_view.content | safe  }}</p>
-    
-    
-    
-    
-</center>
+
+        <h1><strong>{{ story_view.title }}</strong></h1>
+        {% if story_view.story_cover %}
+        <img src="{{ story_view.story_cover.url }}" class="img-fluid" alt="Story cover">
+        {% endif %}
+        <h3>By {{ user }}</h3>
+        <br><br>
+        <p><strong>{{ story_view.blurb }}</strong></p>
+        <br>
+        <p>{{ story_view.content | safe  }}</p>
+
+
+
+
+    </center>
 </body>
 
 </html>
