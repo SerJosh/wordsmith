@@ -291,6 +291,16 @@ p {
     .reg-img
 } */
 
+@media screen and (max-width: 576px) {
+    .form-lg-in {
+        width: 18rem;
+        height: 23rem;
+
+    }
+
+
+}
+
  
 
  
