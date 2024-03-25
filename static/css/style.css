@@ -50,7 +50,12 @@ p {
     /* height: vh-100 */
 }
 
+#welcome {
+    display: block;
+}
+
 .welcome-card {
+    
     top: 10%;
     max-width: 100%;
     background-color: rgba(233, 18, 18, 0);
@@ -111,7 +116,7 @@ p {
 }
 
 #show-delete {
-    display:'block'
+    display: block;
 }
 
 .hidden-defence {
@@ -120,6 +125,10 @@ p {
 
 .card-img-top {
     width: 90%;
+}
+
+#about1 {
+    display: none;
 }
 
 /* !!! */
