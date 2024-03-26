@@ -32,6 +32,7 @@ def edit_story(request, story_id):
 
 def view_story(request, story_id):
     story_view = Story.objects.get(pk=story_id)
+    print(story_view.auther)
     return render(request, 'stories/view_story.html', 
     {'story_view': story_view})
 
@@ -77,7 +78,9 @@ def create_story(request):
     if request.method == "POST":
         form = StoryForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            story = form.save(commit=False)
+            story.auther = request.user  
+            story.save()
             return HttpResponseRedirect('/create_story?submitted=True')
     else:
         form = StoryForm

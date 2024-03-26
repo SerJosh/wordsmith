@@ -1,11 +1,13 @@
-# The Pantry
+# Wordsmith
+
+![AmIResponsive image of Wordmith](assets/screenshots/responsive-wordsmith.png)
 
 ## Introduction
+Wordsmith is a website built in Django using Python, JavaScript, CSS and HTML. It allows the user to share in the love of writing stories by giving them the opportunity to create their own short stories for others to read as well as read other short stories other users have posted.
 
+They can give their story a heading, a blurb (content on the back of a book), a book cover and of course the content. You can edit your own stories as well as delete them if you wish.
 
-![Screenshot of homepage]()
-
-[View the live website on Heroku]()
+[View the live website on Heroku](https://wordsmith-fafcef7f3870.herokuapp.com/)
 
 ## Table of Contents
 * [User Experience Design (UX)](#UX)
