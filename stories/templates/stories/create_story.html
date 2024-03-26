@@ -4,11 +4,10 @@
 
 {% block content %}
 <div class="hero-create" style="background-image: url({% static 'images/library.png' %});">
-  <!-- <div class="create-form mx-auto text-white " style="width: 55rem;"> -->
   <div class="text-white create-div mx-auto">
     <h2>Make your story come true</h1>
       {% if submitted %}
-      <div style="height:40rem">
+      <div class="successful-div">
       <h2>You Story has been Created Successfully!</h2>
       <br>
       <a class="btn btn-signup right btn-dark btn-welcome" href="{% url 'index' %}">Stories</a>
@@ -16,7 +15,7 @@
       {% else %}
 
 
-      <form class="actual-crate-form" method="POST" action="" enctype="multipart/form-data">
+      <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Create" class="btn btn-signup right btn-dark btn-welcome">

@@ -58,10 +58,11 @@
 
     <!--My original stuff-->
     {% for story in stories %}
-    <div class=" mx-auto big-story-card" style="width: 20rem;">
-      <div class="card mx-auto story-card " style="width: 20rem;">
+    <div class=" mx-auto big-story-card">
+      <div class="card mx-auto story-card ">
         <div class="card-body mx-auto">
-          <h5 class="card-title">{{ story.title }} {{ story.auther }} </h5>
+          <h5 class="card-title">{{ story.title }} </h5>
+          <p>By {{ story.auther }}</p>
         </div>
 
 

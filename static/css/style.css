@@ -41,21 +41,15 @@ p {
 /* index.html page */
 
 .hero-book {
-    /* background-image: url('https://res.cloudinary.com/dkbfmfd5z/images/upload/q_auto,f_auto/w_1200/book.avif'); */
     background-size: cover;
     background-position: center center;
-    /* background-attachment: fixed; */
     max-width: 100%;
     height: 630px;
-    /* height: vh-100 */
 }
 
-#welcome {
-    display: block;
-}
+/* index.html page --> Unauthenticated page */
 
 .welcome-card {
-    
     top: 10%;
     max-width: 100%;
     background-color: rgba(233, 18, 18, 0);
@@ -84,31 +78,29 @@ p {
     border-color: rgba(0, 0, 0, 0.0);
 }
 
-/* .index-body {
-    background-color: black;
- } */
+/*index.html page --> Authenticated page */
+
+.big-story-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20rem;
+}
 
 .story-card {
     top: 10%;
     background-color: rgba(0, 0, 0, 0.0);
     border-color: rgba(0, 0, 0, 0.0);
     color: white;
+    width: 20rem;
 }
 
-.st-align {
+.card-img-top {
+    width: 90%;
+}
+
+/*index.html page --> Delete Defence */
+
+.hidden-defence {
     text-align: center;
-}
-
-.image-container {
-    position: relative;
-}
-
-.paginator {
-    margin-top: 1rem;
-}
-
-.del-modal {
-    display: none;
 }
 
 #hide {
@@ -119,17 +111,13 @@ p {
     display: block;
 }
 
-.hidden-defence {
-    text-align: center;
+/*index.html page --> Paginator */
+
+.paginator {
+    margin-top: 1rem;
 }
 
-.card-img-top {
-    width: 90%;
-}
-
-#about1 {
-    display: none;
-}
+/* about.html */
 
 .about {
     text-align: center;
@@ -139,25 +127,19 @@ p {
     font-size: 20px;
 }
 
-/* !!! */
-
-/* .logged {
-    height:400px;
-} */
-
-.logged-img {
-    background-size: cover;
-    background-position: center center;
-    /* background-attachment: fixed; */
-    max-width: 100%;
-    height: 600px;
-    /* height: vh-100 */
-}
+/* Allauth templates */
 
 .form {
     background-color: rgba(0, 0, 0, 0.5);
     height: 300px;
     margin-top: 2%;
+}
+
+.logged-img {
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    height: 600px;
 }
 
 .form-lg-in {
@@ -177,13 +159,8 @@ p {
     width: 25rem;
 }
 
-/* !!! */
-.big-story-card {
-    background-color: rgba(0, 0, 0, 0.5)
-}
+/* create_story.html / edit_story.html */
 
-
-/* Create Story */
 .hero-create {
     background-size: cover;
 }
@@ -196,26 +173,25 @@ p {
     margin: 0 auto;
     place-items: center;
     width: 55rem;
-    /* width:50%; */
-    margin: 0 auto
 }
 
-/* .actual-crate-form {} */
+.successful-div {
+    height: 40rem;
+}
 
 .create-div {
     width: 100%;
-    /* height:100%; */
     margin-top: 2%;
     text-align: center;
-    /* margin: 0 auto; */
-    /* place-items: center; */
-    /* width:50%; */
-    /* margin:0 auto */
 }
+
+/* view_story.html */
 
 .read-div {
     text-align: center;
 }
+
+/* forms.py content */
 
 .title {
     width: 30%;
@@ -231,77 +207,68 @@ p {
     width: 90%;
 }
 
-.page-text {
-
-}
-
-
-
 /* Media Queries */
-@media screen and (max-width: 750px) {
-    .title {
-        width: 40%;
 
+@media screen and (max-width: 400px) {
+    .title {
+        width: 70%;
     }
 
     .blurb {
-        width: 70%;
-
-    }
-
-    .content {
         width: 90%;
     }
 
+    .content {
+        width: 100%;
+    }
+
+    .page-text {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .form-reg {
+        width: 18rem;
+        height: 35rem;
+    }
+
+    .reg-img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about {
+        font-size: 14px;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .title {
         width: 50%;
-
     }
 
     .blurb {
         width: 80%;
-
     }
 
     .content {
         width: 95%;
     }
-
 }
 
-@media screen and (max-width: 400px) {
-    .title {
-        width: 70%;
-
+@media screen and (max-width: 576px) {
+    .form-lg-in {
+        width: 18rem;
+        height: 23rem;
+        font-size: small;
     }
 
-    .blurb {
-        width: 90%;
-
+    .form-lg-out {
+        width: 18rem;
     }
-
-    .content {
-        width: 100%;
-    }
-
-}
-
-
-@media screen and (max-width: 690px) {
-    .hero-book {
-        /* background-size: cover; 
-        background-position: center center;  */
-        /* width: 500px;  */
-        /* height: 100px; */
-        /* background-size: 600px; */
-        /* background: no-repeat center center; */
-        height: auto;
-        width: 100%;
-    }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -322,60 +289,35 @@ p {
 }
 
 @media screen and (max-width: 690px) {
+    .hero-book {
+        height: auto;
+        width: 100%;
+    }
+
     .form-verify {
         width: 20rem;
     }
-
-
 }
 
-@media screen and (max-width: 420px) {
-    .form-reg {
-        width: 18rem;
-        height: 35rem;
+@media screen and (max-width: 750px) {
+    .title {
+        width: 40%;
     }
 
-    .reg-img {
-        height: auto;
-    }
-}
-
-/* @media screen and (max-width: 690px) {
-    .reg-img
-} */
-
-@media screen and (max-width: 576px) {
-    .form-lg-in {
-        width: 18rem;
-        height: 23rem;
-        font-size: small;
-
+    .blurb {
+        width: 70%;
     }
 
-    .form-lg-out {
-        width: 18rem;
-
+    .content {
+        width: 90%;
     }
 }
+
+
 
 @media screen and (max-width: 790px) {
     .about {
         font-size: 15px;
     }
 
-}
-
-@media screen and (max-width: 450px) {
-    .about {
-        font-size: 14px;
-        width: 90%;
-    }
-
-}
-
-@media screen and (max-width: 400px) {
-    .page-text {
-        font-size:x-small;
-
-    }
 }
