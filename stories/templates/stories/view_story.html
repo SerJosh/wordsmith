@@ -4,16 +4,8 @@
 
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Story Page</title>
-</head>
-
 <body>
-    <div class="read-div mx-auto">
-
+    <div class="read-div">
         <h1><strong>{{ story_view.title }}</strong></h1>
         {% if "placeholder" in story_view.story_cover.url %}
         <img class="img-fluid" src="{% static 'images/book.png' %}" alt="placeholder image">
@@ -25,10 +17,8 @@
         <p><strong>{{ story_view.blurb }}</strong></p>
         <br>
         <p>{{ story_view.content | safe  }}</p>
-        <a class="btn btn-signup right btn-dark btn-welcome bg-dark" href="{% url 'index' %}">Back</a>
+        <a class="btn btn-dark btn-welcome bg-dark" href="{% url 'index' %}">Back</a>
     </div>
 </body>
-
-</html>
 
 {% endblock %}

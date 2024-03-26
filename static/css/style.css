@@ -169,16 +169,6 @@ p {
     background-size: cover;
 }
 
-.create-form {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    margin-top: 2%;
-    text-align: center;
-    margin: 0 auto;
-    place-items: center;
-    width: 55rem;
-}
-
 .successful-div {
     height: 40rem;
 }

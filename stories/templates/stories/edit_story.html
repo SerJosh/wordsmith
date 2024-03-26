@@ -4,18 +4,15 @@
 
 {% block content %}
 <div class="hero-create" style="background-image: url({% static 'images/library.png' %})">
-    <div class="text-white create-div mx-auto ">
+    <div class="text-white create-div">
         <h2>Edit Story</h2>
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <br>
-            <input type="submit" value="Edit" class="btn btn-signup right btn-dark btn-welcome">
-            <a class="btn btn-signup right btn-dark btn-welcome" href="{% url 'index' %}">Back</a>
+            <input type="submit" value="Edit" class="btn btn-dark btn-welcome">
+            <a class="btn btn-dark btn-welcome" href="{% url 'index' %}">Back</a>
         </form>
     </div>
 </div>
-
-</html>
-
 {% endblock content %}

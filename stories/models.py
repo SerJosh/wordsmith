@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-
+# Model for Story Creation
 class Story(models.Model):
     title = models.CharField('Title', max_length=20)
     story_cover = CloudinaryField('Story Cover', default='placeholder')

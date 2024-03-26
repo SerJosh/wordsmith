@@ -1,9 +1,8 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Story
-# from django_summernote.widgets import SummernoteWidget
 
-
+# Form for Creating a Story
 class StoryForm(forms.ModelForm):
     class Meta:
         model = Story
@@ -14,5 +13,3 @@ class StoryForm(forms.ModelForm):
             'blurb': forms.Textarea(attrs={'class': 'form-control blurb mx-auto', "rows":4, "cols":10, 'placeholder':"Your Blurb here"}),
             'content': forms.Textarea(attrs={'class': 'form-control content mx-auto', "rows":20, "cols":1000, 'placeholder':"Your Story here"})
         }
-
-    # Content = forms.CharField(widget=SummernoteWidget)
