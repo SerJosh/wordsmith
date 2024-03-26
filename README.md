@@ -54,29 +54,25 @@ They can give their story a heading, a blurb (content on the back of a book), a 
 4. Enhancing website design [#19](https://github.com/SerJosh/wordsmith/issues/19)
 
 ### User Stories
+From the Epics, 18 User stories were developed. Each story was assigned a classification of Must-have, Should-have, Could-have or Wont-have. Each story was also assigned user story points, based on my best estimation for the time/difficulty of completing each story. A combination of being new to story estimation, inexperience with Django and time constraints during development left me completing [find out story points] story points from the initial total of [find out story points]. In an attempt to understand my scope, I did not create a vast amout of user stories initially but created essential must have stories to work on and after the completion of them developed some should-have or lower user stories to work with. The full list of User Stories, seperated by those completed and those pushed to a future release is available on the project [kanban board](https://github.com/users/SerJosh/projects/6/views/1).
 
-
-
-
-
-1. 
-	* 
-	* 
-	* 
+1. Initial Django setup
+	* USER STORY: Django Setup [#2](https://github.com/SerJosh/wordsmith/issues/2) As a Developer, I want to set up Django and install the supporting libraries needed, so that I am ready to start development
+	* USER STORY: Early Deployment to Heroku [#3](https://github.com/SerJosh/wordsmith/issues/3)
 	
-2. 
-	* 
-	* 
-	* 
-	* 
-	* 
-	* 
-
-3. 
+2. User Account
+	* USER STORY: Create a User Account [#5](https://github.com/SerJosh/wordsmith/issues/5)
+	* USER STORY: Users must confirm their email [#6](https://github.com/SerJosh/wordsmith/issues/6)
+	* USER STORY: Users can reset their password [#7](https://github.com/SerJosh/wordsmith/issues/7)
+	* USER STORY: Users can view their profile [#8](https://github.com/SerJosh/wordsmith/issues/8), As a User I can see the details in my user profile so that I can see the information of my user account
 	* 
 	* 
 
-4. 
+3.  USER Short Stories
+	* 
+	* 
+
+4.  Enhancing website design
 	* 
 	* 
 	* 

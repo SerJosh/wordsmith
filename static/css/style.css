@@ -231,6 +231,10 @@ p {
     width: 90%;
 }
 
+.page-text {
+
+}
+
 
 
 /* Media Queries */
@@ -367,4 +371,11 @@ p {
         width: 90%;
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    .page-text {
+        font-size:x-small;
+
+    }
 }
