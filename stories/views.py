@@ -72,6 +72,9 @@ def all_stories(request):
 def index(request):
     return render(request, 'stories/index.html', {})
 
+def about(request):
+    return render(request, 'stories/about.html', {})
+
 
 def create_story(request):
     submitted = False
