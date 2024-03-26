@@ -93,435 +93,249 @@ From the Epics, 18 User stories were developed. Each story was assigned a classi
 
 User Story:
 
-> US#13 - Create a User Account - As a User, I would like to be able to create an account, so that I can create and save recipes
-
-Acceptance Criteria:
-* Given that I am an unregistered user, When I am on the homepage, Then I can see a button to sign up, And, When I click on the button, Then I am taken to the user registration page
-* Given that I am an unregistered user, And, I am on the user registration page, When I enter my username, email address and password, And, I click on the register button, Then The system creates me an account, And, signs me in.
-* Given that I have an account, And, I am signed into the account, When I have an option to create a recipe, And, when I click on that option, Then I am taken to a page where I can provide the details of my recipe
-* Given that I am a registered user, When I am signed into my account, Then I do not see the register button
+> [#2](https://github.com/SerJosh/wordsmith/issues/2) Django Setup - As a Developer, I want to set up Django and install the supporting libraries needed, so that I am ready to start development
 
 Implementation:
-* Clearly accessible call to action on homepage to register for an account
-* Clearly accessible link to login or register within main navigation bar
-* Easy to use User registration process
-* Clear UX design, prevent unnecessary links to register as a user, if user is already logged in.
+* Install Django
+* Install dj_database_url psycopg2
+* Create a requirements.txt file
+* Create the Django project – called wordsmith
+* Create the first app, called stories and add it to the installed apps in the settings.py
+* Create new instance in Postgres SQL and connect database to code
 
 User Story:
 
-> US#14 - Users can view their profile - As a User, I would like to be able to see the details in my user profile, so that I can see what information other users can see about me
-
-Acceptance Criteria:
-* Given that I am logged into my user account
-When I can access an option to view my profile
-Then my profile details are displayed as they appear to other users
+> [#3](https://github.com/SerJosh/wordsmith/issues/3) Early Deployment to Heroku  - As a Developer, I want to deploy the app to Heroku, so that I can confirm everything works before development of the site.
 
 Implementation:
-* Prevent information appearing on user's profile that other users can not see such as account information
-* If information is required to be displayed that other users can not see, clearly label that information so users are aware that others can not see it.
-* Provide clear guidance on how users can control the display of their information on their profile.
+* Update code for deployment
+* Create new Heroku app
+* Connect Heroku to the PostgreSQL database
+* Implement and add Secret Key to project and Heroku config var
 
 User Story:
 
-> US#15 - Users can edit their profile - As a User, I would like to be able to edit my profile, so that I can keep the information upto date
+> 
 
 Acceptance Criteria:
-* Given that I am logged into my account
-When I am viewing my profile
-Then I should be able to edit the details
-* Given that I am logged into my account
-When I click on the edit button on my profile page
-Then I should be taken to a page to edit the details
-* Given that I am not logged into my account
-When I view my profile page, or anyone elses
-Then I should not be able to see the edit button
-* Given that I am not logged into my account
-When I type in the address to edit my profile, or anyone elses
-Then I should be redirected to the log in page.
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide a clearly accessible button on a user's profile for the profile owner only, so they can edit their profile
-* Provide a simple and clear edit profile form, linked from the edit profile button
+* 
+* 
 
 User Story:
 
-> US#16 - Users can delete their account - As a User, I can delete my account, so that I can remove my details and recipes at my request 
+> 
 
 Acceptance Criteria:
-* Given that I am a registered user
-When I navigate to my account
-Then I have an option to delete my account
-* Given that I am a registered user viewing my account details
-When I click on the option to delete my account
-Then I am requested to confirm the request
-* Given that I am a registered user viewing my account details
-When I click on the option to delete my account
-And, When I confirm the request
-Then My account and the recipes that I have created are deleted
-* Given that I am a registered user
-When I delete my account
-Then I should receive confirmation of the account deletion
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide users with an easily accessible option to delete their account
-* Provide users with a secure confirmation process to confirm account deletion requests to prevent accidents
-* Link all user created elements so that when a user deletes their account, all associated records are deleted.
-* Provide the user with confirmation that their account and associated records have been deleted when requested.
+* 
+* 
 
 User Story:
 
-> US#17 - Users can change their password - As a user, I would like to be able to change my password, so that I can keep my account secure
+> 
 
 Acceptance Criteria:
-* Given that I am a registered User, logged in to my account
-When I navigate to the edit profile page
-Then I have the option to change my password
-* Given that I am logged in to my account
-When I change my password
-Then I receive an email confirming my password has been changed
-* Given that I am logged into my account
-When I try to change my password
-Then I am prevented from creating a password that does not meet security requirements
-* Given that I am logged into my account
-When I click the change password link
-Then I am taken to the change password form
-And When I correctly complete the form
-And, press submit
-Then My password is changed to the new value
-And, I receive confirmation on the screen of the change.
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide a clear accessible button for users to access the change password functionality
-* Provide confirmation to the user that password change requests have been successfull or unsuccessfull
-* Provide clear error messages if the user attempts to change their password to something unsuitable
+* 
+* 
 
 User Story:
 
-> US#18 - Users can reset their password - As a User, I would like to be able to reset my password, so that if I forget it I can still access my account
+> 
 
 Acceptance Criteria:
-* Given that I am a forgetful user
-When I try to login with an incorrect password
-Then An option is available to reset my password
-* Given that I click on the link to reset my password
-When I enter my email address that I used to sign up,
-Then I should receive an email with instructions on how to reset my password
-* Given that I have received the email to reset my password
-When I follow the instructions
-Then my password should be reset, or I should be able to set a new password of my choosing
-And When I do not follow the instructions,
-Then my password should not be reset
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide users with the ability to reset their password if they forget it
-* Provide users with the ability to reset their password via email - will require email validation
+* 
+* 
 
 User Story:
 
-> US#19 - User Account Login / Logout - As a User, I would like to be able to login or logout of my account, so that I can keep my account secure
+> 
 
 Acceptance Criteria:
-* Given that I am a registered user, who is not logged in
-When I navigate to the sign in page
-And, I enter my credentials correctly and press sign in
-Then I am signed into my account
-* Given that I am a registered user, who is currently logged in
-When I click on the sign out link
-Then I am signed out of my account
-* Given that I am a registered user, who has signed out of my account
-When I use the browser navigation buttons such as back button
-Then I can not access information which requires me to be signed in
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide login and logout functionality
-* Secure restricted pages from access when a user is not signed in.
+* 
+* 
 
 User Story:
 
-> US#20 - Features restricted to signed in users - As a Site Owner, I would like to restrict some features of the site to registered users, so that it encourages people to sign up to the site
+> 
 
 Acceptance Criteria:
-* Given that a user is not registered or signed in,
-When they view a recipe,
-Then they are unable to save a recipe
-* Given that a user is not registered or signed in,
-When they look at the recipe options
-Then they do not have the ability to create a recipe
-* Given that a user is not registered or signed in,
-When they look at a recipe
-Then they are unable to provide a rating or comment
-* Given that a user is not registered or signed in,
-When they encounter functionality that requires them to be signed in
-Then they are presented with a login or register button.
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Restrict the ability to save a recipe to authenticated users
-* Restrict the ability to create a recipe to authenticated users
-* Restrict the ability to like a recipe to authenticated users
-* Redirect users who make a request for functionality that requires them to be authenticated users to the login page
+* 
+* 
 
 User Story:
 
-> US#22 - Create a Recipe - As a User, I would like to be able to share my own recipes, with family and friends so they can teach them to their own children and have fun experiences together baking
+> 
 
 Acceptance Criteria:
-* Given that I am a logged in user
-When I navigate to the recipe section
-Then I have the option to create a recipe
-* Given that I have created a recipe as a logged in user
-When I save the completed recipe
-Then it is available to other users to view
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide authenticated users with a clear option to create a recipe
-* Make saved recipes available to other users to view
+* 
+* 
 
 User Story:
 
-> US#23 - View Recipes - As a User, I can access the recipes on the site, so that I can follow them at home
+> 
 
 Acceptance Criteria:
-* Given that I am a user on the site
-When I navigate to the recipes page
-Then I am presented with a list of the recipes available
-* Given that I am a user on the site
-When I navigate to the recipes page
-And When I click on a recipe
-Then I am presented with the full recipe details
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide users of the site with the ability to access all completed recipes
-* Provide users of the site with the ability to access the full recipe details from the recipe summary card
+* 
+* 
 
 User Story:
 
->  US#24 - Update a recipe - As a user, I can update a recipe that I have created, so that I can correct any mistakes I may have made
+> 
 
 Acceptance Criteria:
-* Given that I am a registered user who has created a recipe
-When I navigate to that recipe
-Then I have the option to edit the details
-* Given that I am a registered user
-When I navigate to someone else's recipe
-Then I do not get the edit option
-* Given that I am a registered user who has created a recipe
-When I navigate to that recipe, and click the option to edit the details
-Then I am able to edit the details of the recipe
-* Given that I am a registered user who has created a recipe
-When I navigate to the recipe, click the option to edit the details
-And When I have edited the details of the recipe
-Then I have the option to save the changes
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide easy access to recipe owners to edit recipes.
-* Prevent other users from editing a recipe they did not create
-* Provide a method for recipe owners to edit the recipe details - form
-* Ensure recipe edits are saved to the database and users are informed of changes
+* 
+* 
 
 User Story:
 
-> US#25 - Delete a recipe - As a user, I can delete a recipe that I have created, so that I can remove it from the site
+> 
 
 Acceptance Criteria:
-* Given that I am a registered user who is logged in, and has created a recipe
-When I navigate to the recipe that I would like to delete
-Then I have the option to delete the recipe
-* Given that I am a registered user who is logged in, has created a recipe and I am viewing the recipe I wish to delete
-When I click the delete recipe button
-Then I receive a confirmation window to confirm that I really want to delete the recipe
-* Given that I am a registered user who is logged in, has created a recipe, navigated to that recipe and clicked on the delete recipe button
-When the confirmation window appears and I confirm the deletion
-Then the recipe is deleted from the system
-* Given that I am a registered user, or a non registered user
-When I navigate to a recipe page that I did not create
-Then I do not have the option to delete the recipe
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide recipe owners with the option to delete their recipe
-* Provide recipe deletion requests with a confirmation window to prevent mistakes
-* Ensure confirmed deletion requests are processed on the database correctly.
-* Prevent unauthorised access to recipe deletion functionality
+* 
+* 
 
 User Story:
 
-> US#26 - Save other people's recipes to my profile - As a User, I would like to be able to save new recipes, so that I can refer back to them easily at a later date.
+> 
 
 Acceptance Criteria:
-* Given that I am a signed in user
-When I find a recipe I would like to keep
-Then I can save it to my own profile
-* Given that I am not a signed in user
-When I find a recipe I would like to save
-Then when I click on save, it reminds me to login
-And When I login successfully
-Then the recipe I originally wanted to save is saved
-* Given that I am an unregistered user
-When I find a recipe I would like to save
-Then when I click on save, it takes me to the login/register page
-And When I successfully register an account
-Then the recipe I originally wanted to save is saved
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide authenticated users with the ability to save other users recipes to their profile
-* Provide a redirect to the login page if a user attempts an action that requires them to be logged in
-* Unlikely to be achieved - may require user finding the recipe again.
+* 
+* 
 
 User Story:
 
-> US#27 - Create a list of Favourite Recipes - As a User, I would like to be able to save my favourite recipes, so that I can find them quickly at a later date
+> 
 
 Acceptance Criteria:
-* Given that I am a signed in user
-When I want to look at my saved recipes
-Then it should be clear where to find them
-* Given that I am a signed in user
-When I am looking at recipes I have previously saved
-Then I should be able to mark my favourites
-* Given that I am a signed in user
-When I look at a list of all my saved recipes
-Then I should be able to see which are my favourites
-* Given that I am a signed in user
-When I want to look at only my favourite recipes
-Then I should be able to filter my saved recipes to show only the favourites
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide authenticated users with easy access to saved recipes
-* Provide authenticated users with easy method to both save recipes and mark their favourites
-* Provide authenticated users with a visual indicator on recipe summary card if they have saved it or marked it as a favourite
-* Provide authenticated users with an easy way to access their favourite recipes
+* 
+* 
 
 User Story:
 
-> US#33 - Recipe Searching - As a User, I would like to be able to find recipes, so that I can increase the variety of meals we consume.
+> 
 
 Acceptance Criteria:
-* Given that I am a user of the website
-When I navigate to the homepage
-Then I can access a link to all the recipes
-* Given that I am a user of the website
-When I enter the recipe section of the site
-Then I have options to navigate to different recipe sections
-* Given that I am a user of the website
-When I want to view a specific recipe
-Then I can access the full recipe details by clicking on the recipe
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide ease of access to full recipe list
-* Provide users with ability to filter recipes - search functionality
-* Provide users with the ability to access full recipe details from the summary card
+* 
+* 
 
 User Story:
 
-> US#34 - Recipe Search - Advanced - As a User, I would like to be able to search the recipes, so that I can find the ones that match my fancy at that point in time
+> 
 
 Acceptance Criteria:
-* Given that I am a user of the website
-When I navigate to the site
-Then I can access a search function to access related recipes
-* Given that I am a user of the website
-When I search the recipes
-Then the search results show relevant recipes
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide all users the ability to search the recipes
-* Enable search query to match with recipe title and recipe author
+* 
+* 
 
 User Story:
 
-> US#39 - Clear Recipe Layout - As a User, I would like clear instructions on how to make each recipe, so that I am able to follow along as an inexperienced cook
-
+> 
 
 Acceptance Criteria:
-* Given that I am a user
-When I click on a recipe to view the details
-Then The instructions on how to make the recipe are clearly accessible
-* Given that I am a user accessing the recipe details
-When I access a recipe instructions
-Then They should be easily to identify the order in which they should be followed
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide users with a clean and simple recipe detail page layout
-* Provide users with a easy to follow instruction list 
+* 
+* 
 
 User Story:
 
-> US#36 - Recipe Summary Cards - As a User, I would like to be able to view multiple recipes at the same time, so that I can easily decide which one I want to follow
+> 
 
 Acceptance Criteria:
-* Given that I am a user
-When I search for or navigate to the full list of recipes
-Then The recipes are summarised individually
-* Given that I am a user and I have chosen which of the displayed recipes I'd like to select
-When I click on the recipe
-Then I am taken to the full recipe details
+* Given 
+* Given that 
+* Given that 
+* Given that 
 
 Implementation:
-* Provide users with recipe summary cards
-* Link recipe summary cards to full recipe details
-
-User Story:
-
-> US#47 - Responsive Templates - As a Site Owner, I would like my site to be fully responsive, so that Users accessing the site from different devices have an enjoyable experience
-
-Acceptance Criteria:
-* Given that I am a user accessing the site on my smartphone
-When I navigate through the site
-Then all pages should be formatted to my device
-* Given that I am a user accessing the site on my tablet
-When I navigate through the site
-Then all pages should be formatted to my device
-* Given that I am a user accessing the site on my laptop
-When I navigate through the site
-Then all pages should be formatted to my device screen
-* Given that I am a user accessing the site on my desktop computer
-When I navigate the site
-Then all pages should be formatted to suit my screen size
-
-Implementation:
-* Provide users with a fully responsive site that responds to mobile, tablet, laptop and desktop sized devices
-
-User Story:
-
-> US#48 - Colour Scheme Preference options - As a Site Owner, I would like the site to havea dark colour option, so that users have the ability to view the site in a colour scheme they prefer.
-
-Acceptance Criteria:
-* Given that users visit the site on different devices
-When their device has a preferred-colour-scheme set
-Then the site should be presented in that scheme
-* Given that users visit the site
-When they manually set the colour scheme choice
-Then the site should remember their preference
-* Given that users register for the site
-When they log in to the site,
-Then the site should change to their personal colour preference without setting a new preference on that device
-
-Implementation:
-* Provide users with the choice of colour scheme
-* Provide users with a site that recognises their system colour scheme preference
-
-User Story:
-
-> US#29 - Rate a Recipe - As a User, I can give a recipe a rating, so that I can provide the author feedback and rank recipes that I like
-
-Acceptance Criteria:
-* Given that I am a logged in User
-When I navigate to a recipe detail page
-Then I have the ability to provide a rating
-* Given that I am a logged in User
-When I navigate to a recipe detail page for a recipe I have previously given a rating
-Then I can not provide an additional rating
-* Given that I am a logged in user
-When I navigate to one of the recipes that I created
-Then I can not provide a rating
-* Given that I am a user that is not logged in
-When I navigate to a recipe detail page
-Then I do not have the ability to provide a rating
-
-Implementation:
-* Provide authenticated users with the ability to rate a recipe
-* Restrict authenticated users from rating a recipe multiple times
-* Prevent users from rating a recipe they created
-* Prevent unauthenticated users from rating a recipe.
+* 
+* 
 
 #### Opportunities
 

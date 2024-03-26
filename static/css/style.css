@@ -80,6 +80,10 @@ p {
 
 /*index.html page --> Authenticated page */
 
+.card-align {
+    text-align: center;
+}
+
 .big-story-card {
     background-color: rgba(0, 0, 0, 0.5);
     width: 20rem;
@@ -152,7 +156,7 @@ p {
 
 .form-reg {
     width: 55rem;
-    height: 25rem;
+    height: 35rem;
 }
 
 .form-verify {
@@ -319,5 +323,4 @@ p {
     .about {
         font-size: 15px;
     }
-
 }
