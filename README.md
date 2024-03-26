@@ -31,28 +31,27 @@ They can give their story a heading, a blurb (content on the back of a book), a 
 
 ## UX
 ### The Strategy Plane
-*  
+*  Wordsmith is intended to be a site for users to create their own short stories for them to express themselves and share them for others to read. The user experience and design is to imply simplicity so that the users are not overloaded with information and get to the core of just creating, reading and enjoying the experience Wordsmith has to offer.
 
 ##### The Sites Ideal User
-* 
-* 
-* 
-* 
+* A creative writer looking to share their own stories
+* Someone who wants to enjoy reading short stories 
+* A creative writer who wants to enjoy the art od story creation
 
 #### Site Goals
 
-* 
-* 
-* 
+* To provide users a place to create and edit their own stories for others to read
+* To provide users a place to read other short stories
 
 #### Epics
 
+4 Epics were created which were then further developed into 18 User Stories. The details on each epic, along with the user stories linked to each one can be found in the project kanban board [here](https://github.com/users/SerJosh/projects/6/views/1)
 
 
-1. 
-2. 
-3. 
-4. 
+1. Initial Django Setup [#1](https://github.com/SerJosh/wordsmith/issues/1)
+2. User Account [#4](https://github.com/SerJosh/wordsmith/issues/4)
+3. User Short Stories [#14](https://github.com/SerJosh/wordsmith/issues/14)
+4. Enhancing website design [#19](https://github.com/SerJosh/wordsmith/issues/19)
 
 ### User Stories
 

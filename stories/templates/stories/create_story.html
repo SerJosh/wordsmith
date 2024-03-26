@@ -8,7 +8,9 @@
   <div class="text-white create-div mx-auto">
     <h2>Make your story come true</h1>
       {% if submitted %}
-      You Story has been Created Successfully!
+      <h2>You Story has been Created Successfully!</h2>
+      <br>
+      <a class="btn btn-signup right btn-dark btn-welcome" href="{% url 'index' %}">Back</a>
       {% else %}
 
 
@@ -16,6 +18,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Create" class="btn btn-signup right btn-dark btn-welcome">
+        <a class="btn btn-signup right btn-dark btn-welcome" href="{% url 'index' %}">Back</a>
       </form>
       {% endif %}
   </div>
