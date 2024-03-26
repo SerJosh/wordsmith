@@ -5,7 +5,7 @@
 
 ![Screenshot of homepage]()
 
-[View the live website on Heroku](https://pp4-the-pantry.herokuapp.com/)
+[View the live website on Heroku]()
 
 ## Table of Contents
 * [User Experience Design (UX)](#UX)
