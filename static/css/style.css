@@ -213,65 +213,34 @@ p {
 
 /* Media Queries */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 790px) {
+    .about {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
     .title {
+        width: 40%;
+    }
+
+    .blurb {
         width: 70%;
     }
 
-    .blurb {
+    .content {
         width: 90%;
     }
+}
 
-    .content {
+@media screen and (max-width: 690px) {
+    .hero-book {
+        height: auto;
         width: 100%;
     }
 
-    .page-text {
-        font-size: x-small;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .form-reg {
-        width: 18rem;
-        height: 35rem;
-    }
-
-    .reg-img {
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .about {
-        font-size: 14px;
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .title {
-        width: 50%;
-    }
-
-    .blurb {
-        width: 80%;
-    }
-
-    .content {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .form-lg-in {
-        width: 18rem;
-        height: 23rem;
-        font-size: small;
-    }
-
-    .form-lg-out {
-        width: 18rem;
+    .form-verify {
+        width: 20rem;
     }
 }
 
@@ -292,35 +261,79 @@ p {
     }
 }
 
-@media screen and (max-width: 690px) {
-    .hero-book {
-        height: auto;
-        width: 100%;
+@media screen and (max-width: 576px) {
+    .form-lg-in {
+        width: 18rem;
+        height: 23rem;
+        font-size: small;
     }
 
-    .form-verify {
-        width: 20rem;
+    .form-lg-out {
+        width: 18rem;
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 500px) {
     .title {
-        width: 40%;
+        width: 50%;
     }
 
     .blurb {
-        width: 70%;
+        width: 80%;
     }
 
     .content {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about {
+        font-size: 14px;
         width: 90%;
     }
 }
 
+@media screen and (max-width: 420px) {
+    .form-reg {
+        width: 18rem;
+        height: 35rem;
+    }
 
-
-@media screen and (max-width: 790px) {
-    .about {
-        font-size: 15px;
+    .reg-img {
+        height: auto;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .title {
+        width: 70%;
+    }
+
+    .blurb {
+        width: 90%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .page-text {
+        font-size: x-small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
