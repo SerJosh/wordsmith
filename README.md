@@ -1,6 +1,6 @@
 # Wordsmith
 
-![AmIResponsive image of Wordmith](assets/screenshots/responsive-wordsmith.png)
+![AmIResponsive image of Wordmith](documentation/responsive-wordsmith.png)
 
 ## Introduction
 Wordsmith is a website built in Django using Python, JavaScript, CSS and HTML. It allows the user to share in the love of writing stories by giving them the opportunity to create their own short stories for others to read as well as read other short stories other users have posted.
@@ -556,57 +556,32 @@ Arising from user stories
 | Opportunities | Importance | Viability / Feasibility
 | ------ | :------: | :------: |
 | ** Provide users the ability to create an account ** | 5 | 5 |
-| ** Provide users the ability to create recipes ** | 5 | 5 |
-| ** Provide users the ability to edit recipes ** | 5 | 5 |
-| ** Provide users the ability to view recipes ** | 5 | 5 |
-| ** Provide users the ability to delete recipes ** | 5 | 5 |
-| ** Provide users the ability to edit their account ** | 5 | 5 |
-| ** Provide users the ability to view other accounts ** | 5 | 5 |
-| ** Provide users the ability to delete their account ** | 5 | 5 |
-| ** Provide users the ability to change the colour scheme ** | 2 | 5 |
-| ** Provide users the ability to save a recipe ** | 3 | 5 |
-| ** Provide users the ability to rate a recipe ** | 3 | 5 |
+| ** Provide users the ability to create short stories ** | 5 | 5 |
+| ** Provide users the ability to edit short stories ** | 5 | 5 |
+| ** Provide users the ability to view short stories ** | 5 | 5 |
+| ** Provide users the ability to delete short stories ** | 5 | 5 |
+| ** Provide users the ability to edit their account ** | 4 | 3 |
+| ** Provide users the ability to view other accounts ** | 3 | 3 |
+| ** Provide users the ability to delete their account ** | 4 | 4 |
 | ** Provide users the ability to access the site on any device ** | 5 | 5 |
-| ** Provide users the ability to search the site for recipes ** | 4 | 5 |
 
 ### The Skeleton Plane
 #### Wireframe mock-ups
 
-Home page: The home page provides the user with a clear understanding as to the purpose of the site. There is a clear call to action for the user to search for a recipe with the inclusion of a search bar at the top of the home page. The welcome message is clearly visable to the user when they first arrive at the site regardless of the device they are using.
+[Balsamiq](https://balsamiq.com/) has been used to mockup the website and display the placement of the different elements whitin the pages. Obviously, there is now a difference from the mockup to the finished website as new inspirations occurred to me whilst working on the project, the most notable would be removing the global stories and own stories page, and combining them.
 
-![Home Page Wireframe](/assets/wireframes/homepage-desktop.png)
-
-Users have the ability to create recipes to share with other users. The emphasis of the design is to provide a clear recipe layout that can adapt to any size device. Clearly seperating general information, ingredients and steps.
-
-![Recipe Detail Desktop Wireframe](/assets/wireframes/recipe-detail-desktop.png)
-
-Users also have the ability to create a personal profile. From this profile users can access the recipes they have created and those that they have liked quickly and easily. They can also control the information they share with other users.
-
-![User Profile Desktop Wireframe](/assets/wireframes/individual-profile-desktop.png)
-
-Users will have the ability to search for recipes based on a search query of their choice. To aid in the discovery of different recipes, each recipe will be displayed in the form of a summary card from which the user can access the full recipe details.
-
-![Recipe search page with results desktop wireframe](/assets/wireframes/recipe-search-desktop.png)
-
-Users will have the ability to search for other users, so if there is a user who's recipes they like regularly, they can access their profile to find out more information about them.
-
-![Profile search page with results desktop wireframe](/assets/wireframes/profiles-page-desktop.png)
-
-Wireframes were also produced for each major page for both mobile and tablet devices. With the intention of the site being fully responsive so that no matter the device size the user is viewing the site on, it will display accordingly.
-
-* [Home page mobile wireframe](/assets/wireframes/homepage-mobile.png)
-* [Home page tablet wireframe](/assets/wireframes/homepage-tablet.png)
-* [Recipe detail page mobile wireframe](/assets/wireframes/recipe-detail-mobile.png)
-* [Recipe search page mobile wireframe](/assets/wireframes/recipe-search-mobile.png)
-* [Recipe search page tablet wireframe](/assets/wireframes/recipe-search-tablet.png)
-* [User profile search results page mobile wireframe](/assets/wireframes/profiles-page-mobile.png)
-* [User profile search results page tablet wireframe](/assets/wireframes/profiles-page-tablet.png)
+index.html unauthenticated ![index.html unauthenticated wireframe image](documentation/wireframe-1.png)
+create_story.html ![create_story.html wireframe image](documentation/wireframe-2.png)
+index.html authenticated ![contact-us.html wireframe image](documentation/wireframe-3.png)
+view_story.html ![index.html authenticated wireframe image](documentation/wireframe-4.png)
+Planned Global Stories ![Planned Global Stories wireframe image](documentation/wireframe-5.png)
+about.html ![about.html wireframe image](documentation/wireframe-6.png)
 
 #### Database Schema
 
-Several custom models were predicted to be required when building the site. The intention to utilise AllAuth for the user authentication system, which utilises the built in Django User Model removed the need to build a custom User model, however a custom User Profile was required. In order for the users to create Recipes a custom recipe model was required, which would be linked to the User Profile through using the profile as a foreign key. As each recipe could have a different number of ingredients or steps to it, it was decided to seperate out the ingredients and steps into their own model, and link them to the recipe through a foreign key. The database schema was planned using [DrawSQL app](https://drawsql.app/). Limitations of the app prevented labelling the field types correctly, it did not include the option to override the types available and did not include textarea, cloudinary fields or url fields. The models in the app reflect the true field choice.
+Two custom models were originally predicted to be required when building the site. The intention to utilise AllAuth for the user authentication system, which utilises the built in Django User Model removed the need to build a custom User model, however I originally wanted a User Profile, but time constraints prvented me from implementing this. In order for the users to create Short stories a custom Story model was developed, but I could not implement Date, Genre and Posted due to time constraints. The models in the app reflect the true field choice.
 
-![Database Schema Diagram](/assets/wireframes/database-scheme.png)
+![Database Schema Diagram](documentation/database-idea.png)
 
 ### The Surface Plane
 
