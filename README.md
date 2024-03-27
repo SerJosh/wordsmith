@@ -587,13 +587,29 @@ Two custom models were originally predicted to be required when building the sit
 
 #### Design
 
-Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected the colour scheme using the adobe colour selector. This was repeated for the darker colour scheme, I also referenced the google material design guidelines for the darker colour scheme. Both colour schemes were checked for colour contrast to ensure that the appropriate colours were used for a high level of colour contrast to maximise accessibility for users.
+For the design, I wanted it to be simplistic yet creative as the site encourages you to be creative with your contant. I applied book related backgrounds with a theme of a more fantasy like nature. I tried to not make the pages too busy with content so that everything was easy to find and understand.
 
 ##### Typography 
-Poppins a sans serif font was chosen for its clean clear design. It is important that the text of the recipes and the site are clear and easy for users to read, especially considering the nature of the site and that users might be reading the recipes whilst cooking.
+IM Fell English SC, Cairo and sans serif fonts were chosen. IM Fell English SC for the headings, with its typewrite like text to add to the theme of story creation, Cairo for the paragraph content as it is modern and easy to read, and sans serif for a backup font if the others do not load. 
 
 ##### Images
-Several cartoon chef characters were accessed from [Vecteezy.com](https://www.vecteezy.com/members/heriyusuf/uploads). The artist Heriyusuf is responsible for the artwork for each cartoon chef. The artwork is available on a free license from [Vecteezy.com](https://www.vecteezy.com). 
+Three main images were used for the background of the pages, and a placeholder book image supplied for users who do not upload an image (cover) to their short story.
+
+This image was used in the index page, authenticated or unauthenticated.
+
+![index.html background](documentation/book-hero.png)
+
+This image was used for all allauth template pages
+
+![allauth template background](documentation/library.png)
+
+This image was used for the create story, edit story and about pages
+
+![create_story.html, edit_story.html, about.html background](documentation/bookstars.jpg)
+
+This placeholder image was used for a placeholder for stories without images
+
+![placeholder image](documentation/book.png)
 
 
 ## Features
