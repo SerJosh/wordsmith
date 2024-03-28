@@ -3,16 +3,20 @@
 {% load static %}
 
 {% block content %}
-<div class="hero-create" style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711583882/library_etgh0c.png);">
+<!-- Create Story content -->
+<div class="hero-create"
+  style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711649619/library-dark2_t1xb61.png);">
   <div class="text-white create-div">
     <h2>Make your story come true</h2>
     {% if submitted %}
+    <!-- Create Story success -->
     <div class="successful-div">
       <h2>You Story has been Created Successfully!</h2>
       <br>
       <a class="btn btn-dark btn-welcome" href="{% url 'index' %}">Stories</a>
     </div>
     {% else %}
+    <!-- Create_story form -->
     <form method="POST" action="" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}

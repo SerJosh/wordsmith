@@ -601,11 +601,11 @@ This image was used in the index page, authenticated or unauthenticated.
 
 This image was used for all allauth template pages
 
-![allauth template background](documentation/library.png)
+![allauth template background](documentation/bookstars.jpg)
 
 This image was used for the create story, edit story and about pages
 
-![create_story.html, edit_story.html, about.html background](documentation/bookstars.jpg)
+![create_story.html, edit_story.html, about.html background](documentation/library-dark2.png)
 
 This placeholder image was used for a placeholder for stories without images
 
