@@ -24,7 +24,7 @@ They can give their story a heading, a blurb (content on the back of a book), a 
     * [The Surface Plane](#The-Surface-Plane)
 * [Features](#features)
 * [Future Enhancements](#future-enhancements)
-* [Technologies Used](#technologies-used)
+* [Technologies and Resources Used](#technologies-and-resources-used)
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
@@ -631,4 +631,147 @@ This placeholder image was used for a placeholder for stories without images
 #### Footer
 
 ![footer](documentation/footer-p4.png)
+
+## Future Enhancements
+There are several items of functionality that I would like to add in the future, being the user stories I could not complete as well as the seperate global stories and personal stories seperation which was originally intended for the project shown in the wireframes.
+
+The key areas I would like to add to the site in the future are:
+* The ability to post your own stories after completion to the global stories page
+* The ability for users to have their own profile where they can edit, delete account and give a bio about themselves.
+* The ability for users to like and comment on other users stories..
+
+## Testing
+
+### Validation of Code
+
+#### HTML
+
+All the pages were tested at the [W3C Markup Validation Service](https://validator.w3.org/).
+
+#### CSS
+
+The CSS code was tested at [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+
+#### JavaScript
+
+All three JavaScript files were validated through [JSHint](https://jshint.com/).
+
+#### Python
+
+All Python files have been validated through [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+### Lighthouse
+
+#### Index page
+
+#### Create story page
+
+#### Login page
+
+### Manual Testing
+
+### Bugs
+
+## Technologies and Resources Used
+
+* Python
+    * The following python modules were used on this project:
+        * asgiref==3.7.2
+        * cloudinary==1.36.0
+        * dj-database-url==0.5.0
+        * dj3-cloudinary-storage==0.0.6
+        * Django==4.2.10
+        * django-allauth==0.57.2
+        * django-summernote==0.8.20.0
+        * gunicorn==20.1.0
+        * oauthlib==3.2.2
+        * pillow==10.2.0
+        * psycopg2==2.9.9
+        * PyJWT==2.8.0
+        * python3-openid==3.2.0
+        * requests-oauthlib==1.3.1
+        * sqlparse==0.4.4
+        * urllib3==1.26.18
+        * whitenoise==5.3.0
+
+* Django
+    * Django was used as the main python framework in the development of this project
+    * Django AllAuth was utilised to provide enhanced user account management functionality.
+* Heroku
+    * Was used as the cloud based platform to deploy the site on
+* ElephantSQL
+    * ElephantSQL was used as the database for this project during development and in production.
+* JavaScript
+    * Custom JavaScript was utilised to enable defencive programming for the delete story button as well as the cancel button if not wanting to delet your story
+* Bootstrap 5.3
+    * Bootstrap was used for general layout and spacing requirements for the site.
+* Font Awesome
+    * Was used for access to several icons for different sections where icons were appropriate.
+* CSS
+    * Custom css was written for a large number of areas on the site to implement custom styling and escape a bootstrap look and feel to the site.
+* Jinja/Django Templating
+    * Jinja/Django templating language was utilised to insert data from the database into the sites pages. It was also utilised to perform queries on different datasets.
+* HTML
+    * HTML was used as the base language for the templates created for the site.
+
+#### Packages Used
+
+* Gitpod was used to develop the site
+* Cloudinary was used for the storingg of images and css when deployed to heroku
+* GitHub was utilised for storing the files for this project
+* Balsamiq was utilised to develop wireframes for the site from which the design was based
+
+#### Resources Used
+
+* [Codemycom](https://www.youtube.com/@Codemycom)'s Django Wednesdays was used for a guideline on how to go about the project creation and its essentials. This is the [repository](https://github.com/flatplanet/Django-Club-Youtube-Playlist)
+* [the-pantry](https://github.com/MattBCoding/pp4-the-pantry) by mattB (my mentor) was used for a guideline on how to go about the projects scope and finer details and the structure of the readme file.
+* The Code Institute reference material was used as a general reference for things that I had previously done during the course.
+* All other resources I have gone through during this course, from stack overflow to reddit, i could not name them all.
+
+## Deployment
+
+The site was deployed via Heroku, and the live link can be found here - [The Pantry](https://pp4-the-pantry.herokuapp.com/)
+
+### Project Deployment
+
+* Open the chosen repository in GitHub 
+* Click on the "Fork" button
+* A copy of the repository is now located in your own account
+
+### Clone repository in GitHub
+
+* Open the chosen repository in GitHub 
+* Click on "Code" button
+* Copy the URL
+* Open your command line interface
+* Navigate to the directory you want to clone the repository to
+* Use 'git clone', followed by the earlier copied URL
+* Move into the newly created directory
+* Install the dependencies using 'pip install -r requirements.txt'
+* Run the application with 'python manage.py runserver'
+
+### Deployment to Heroku
+
+* Open Heroku and log in
+* Click on "New" and choose the option "Create new app"
+* Choose an app name and which region (Europe or United States) you are located in
+* Press "Create app"
+* When the app is created, choose the Settings tab
+* Under "Config Vars", press "Reveal Config Vars"
+* In keys, write DATABASE_URL
+* In value, insert the url to the database
+* Press "Add"
+* Under "Buildpacks", press "Add buildpack"
+* Choose "Python", press "Add buildpack"
+* Change tab to the Deploy tab
+* Choose deploy method - GitHub
+* Search for the correct repository name at your connected GitHub account
+* Press "Connect"
+* Under "Manual deploy", choose which branch to deploy and press "Deploy Branch"
+
+Link to deployed website: [Wordsmith](https://wordsmith-fafcef7f3870.herokuapp.com/)
+
+### Acknowledgements
+
+I'd like to thank the following:
 
