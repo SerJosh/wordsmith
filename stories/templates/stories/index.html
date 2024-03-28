@@ -19,12 +19,12 @@
           <p>By {{ story.auther }}</p>
         </div>
         {% if "placeholder" in story.story_cover.url %}
-        <img class="card-img-top mx-auto" src="{% static 'images/book.png' %}" alt="placeholder image">
+        <img class="card-img-placeholder mx-auto" src="{% static 'images/book.png' %}" alt="placeholder image">
         {% else %}
         <img class="card-img-top mx-auto" src=" {{ story.story_cover.url }}" alt="{{ story.title }}">
         {% endif %}
         <div class="card-body mx-auto">
-          <p class="card-text text-break">{{ story.blurb }}</p>
+          <p class="card-text text-break text-blurb">{{ story.blurb }}</p>
         </div>
         <div id="show-delete" class="card-body mx-auto">
           <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>

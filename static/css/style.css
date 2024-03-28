@@ -104,7 +104,16 @@ p {
 }
 
 .card-img-top {
+    width: 200px;
+    height: 200px;
+}
+
+.card-img-placeholder {
     width: 90%;
+}
+
+.text-blurb{
+    font-size: 14px;
 }
 
 /*index.html page --> Delete Defence */
