@@ -9,8 +9,9 @@
 
 
 {% block content %}
+<!-- Email confirm content -->
 <div class="container-fluid logged-img"
-    style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711582792/bookstars_xor54k.jpg); background-size: cover;">
+    style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711582792/bookstars_xor54k.jpg)">
     <div class="container form form-verify text-white">
         <h1>{% trans "Confirm Email Address" %}</h1>
 
@@ -22,10 +23,10 @@
         <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a
                 href="mailto:{{ email }}">{{ email }}</a> is an email address for user
             {{ user_display }}.{% endblocktrans %}</p>
-
+        <!-- Email confirm form -->
         <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
             {% csrf_token %}
-            <button class="btn btn-signup right btn-dark btn-welcome" type="submit">{% trans 'Confirm' %}</button>
+            <button class="btn btn-dark btn-welcome" type="submit">{% trans 'Confirm' %}</button>
         </form>
         {% else %}
         <p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different

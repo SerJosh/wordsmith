@@ -12,6 +12,11 @@ p {
 
 /* base.html page */
 
+.site-flex {
+    display: flex;
+    min-height: 100vh;
+}
+
 .w-icon {
     font-size: 25px;
 }
@@ -45,6 +50,7 @@ p {
     background-position: center center;
     max-width: 100%;
     height: 630px;
+    flex-grow: 5;
 }
 
 /* index.html page --> Unauthenticated page */
@@ -167,6 +173,7 @@ p {
 
 .hero-create {
     background-size: cover;
+    flex-grow: 5;
 }
 
 .successful-div {
@@ -183,6 +190,7 @@ p {
 
 .read-div {
     text-align: center;
+    flex-grow: 5;
 }
 
 /* forms.py content */

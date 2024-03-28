@@ -24,54 +24,56 @@
   <title>Wordsmith</title>
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100 main-bg site-flex">
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container-fluid">
-      <h1><a class="navbar-brand fs-1" href="{% url 'index' %}">
-          Wordsmith
-          <i class="fa-solid fa-pen-nib w-icon"></i>
-        </a></h1>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto nav-menu">
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == create_url %}active{% endif %}" aria-current="page"
-              href="{% url 'create-story' %}">Create</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == stories_url %}active{% endif %}" aria-current="page"
-              href="{% url 'index' %}">Stories</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
-              href="{% url 'about' %}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
-              href="{% url 'account_logout' %}">Sign Out</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-              href="{% url 'account_login' %}">Sign In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
-              href="{% url 'account_signup' %}">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
-          </li>
-          {% endif %}
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div class="container-fluid">
+        <h1><a class="navbar-brand fs-1" href="{% url 'index' %}">
+            Wordsmith
+            <i class="fa-solid fa-pen-nib w-icon"></i>
+          </a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-menu">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == create_url %}active{% endif %}" aria-current="page"
+                href="{% url 'create-story' %}">Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == stories_url %}active{% endif %}" aria-current="page"
+                href="{% url 'index' %}">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
+                href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                href="{% url 'account_logout' %}">Sign Out</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                href="{% url 'account_login' %}">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                href="{% url 'account_signup' %}">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   <!-- display logged in user -->
   <div class="container-fluid bg-dark navbar-dark">
     <span class="navbar-text fst-italic">
