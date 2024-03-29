@@ -9,7 +9,7 @@
     <div class="text-white create-div">
         <h2>Edit Story</h2>
         <!-- Edit Story form -->
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <br>
