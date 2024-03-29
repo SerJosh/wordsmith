@@ -1,6 +1,6 @@
 # Wordsmith
 
-![AmIResponsive image of Wordmith](documentation/responsive-wordsmith.png)
+![AmIResponsive image of Wordmith](documentation/responsive2.png)
 
 ## Introduction
 Wordsmith is a website built in Django using Python, JavaScript, CSS and HTML. It allows the user to share in the love of writing stories by giving them the opportunity to create their own short stories for others to read as well as read other short stories other users have posted.
@@ -599,7 +599,7 @@ This image was used in the index page, authenticated or unauthenticated.
 
 ![index.html background](documentation/book-hero.png)
 
-This image was used for all allauth template pages
+This image was used for all allauth template pages and error pages
 
 ![allauth template background](documentation/bookstars.jpg)
 
@@ -616,21 +616,111 @@ This placeholder image was used for a placeholder for stories without images
 
 #### Index.html Unauthenticated
 
+An unauthenticated landing page was built to inroduce the user to the site, giving them the options to sign in, sign up or read about the website.
+
 ![Index.html Unauthenticated](documentation/landing-p4.png)
 
 #### Navigation Bar
 
+The main navigation bar appears at the top of the page, clearly displaying the main navigational links users would require. This image is for those who are not signed in yet.
+
 ![Logged out Nav Bar](documentation/navbar-p4.png)
+
+The main navigation bar appears at the top of the page, clearly displaying the main navigational links users would require. This image is for those who are signed in.
 
 ![logged in Nav Bar](documentation/navbar2-p4.png)
 
+The main navigation bar appears at the top of the page, clearly displaying the main navigational links users would require. This image is when the nav bar is seen on a smaller device.
+
 ![mobile Nav Bar](documentation/navbar3-p4.png)
+
+The main navigation bar appears at the top of the page, clearly displaying the main navigational links users would require. This image is when the nav bar is seen on a smaller device and the toggle bar is opened.
 
 ![mobile Nav Bar open](documentation/navbar4-p4.png)
 
 #### Footer
 
+The footer element shows all the social links available, goodreads and git hub which takes the user to their respective sites on a seperate page.
+
 ![footer](documentation/footer-p4.png)
+
+#### Index.html Authenticated
+
+An authenticated landing page was built to inroduce the user to the site, displaying the story card and paginator
+
+![Index.html Authenticated](documentation/authenticate-landing.png)
+
+#### Story Card
+
+The story card, displaying the Title, auther, cover and blurb with the option to read, edit and delete
+
+![Story Card](documentation/story-card.png)
+
+The story card of another user, displaying the Title, auther, cover and blurb with the option to read only
+
+![Story Card](documentation/story-card-nonuser.png)
+
+#### About page
+
+The about page explains the websites goals and how to use it
+
+![Story Card](documentation/aboutp4.png)
+
+#### Create story
+
+The create story page lets you create your story, from the title, the blurb, the content and the cover
+
+![Story Card](documentation/createp4.png)
+
+A successful notification when the story has been created
+
+![Story Card](documentation/create-suc.png)
+
+#### Edit story
+
+The edit story page lets you edit your story, from the title, the blurb, the content and the cover
+
+![Story Card](documentation/edit-p4.png)
+
+#### Read story
+
+The read story page lets you read the story, diplaying all its content
+
+![Story Card](documentation/read1p4.png)
+
+![Story Card](documentation/read2p4.png)
+
+#### error 500 and 404 pages
+
+Displays that something went wrong and lets you return to safety, which is the landing page(index.html)
+
+![Story Card](documentation/errorp4.png)
+
+#### Allauth templates
+
+The Allauth templates are reletively the same with its own content within a dark overlay and hover effect buttons
+
+sign-in
+![sign-in](documentation/allauth1.png)
+
+sign-up
+![sign-up](documentation/allauth2.png)
+
+password reset
+![password-reset](documentation/allauth3.png)
+
+password reset
+![password reset](documentation/allauth4.png)
+
+change password
+![change-password](documentation/allauth5.png)
+
+verify
+![verify](documentation/allauth6.png)
+
+confirm
+![confirm](documentation/allauth7.png)
+
 
 ## Future Enhancements
 There are several items of functionality that I would like to add in the future, being the user stories I could not complete as well as the seperate global stories and personal stories seperation which was originally intended for the project shown in the wireframes.
@@ -647,6 +737,43 @@ The key areas I would like to add to the site in the future are:
 #### HTML
 
 All the pages were tested at the [W3C Markup Validation Service](https://validator.w3.org/).
+
+index.html
+
+about.html
+
+create_story.html
+
+view_story.html
+
+edit_story.html
+
+500.html
+
+404.html
+
+base.html
+
+email_confirm.html
+
+login.html
+
+logout.html
+
+password_reset_done.html
+
+password_reset_from_key_done.html
+
+password_reset_from_key.html
+
+password_reset.html
+
+signup.html
+
+verification_sent.html
+
+verified_email_required.html
+
 
 #### CSS
 

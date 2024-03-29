@@ -30,7 +30,7 @@
           <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
           {% if user == story.auther %}
           <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
-          <button href="#" id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
+          <button id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
           {% endif %}
         </div>
         <div id="hide" class="hidden-defence">
@@ -44,7 +44,7 @@
     <!-- Paginator -->
     <ul class="pagination justify-content-center paginator">
       {% if stories.has_previous %}
-      <li class="page-item bg-dark "><a href="?page=1" class="page-link bg-dark text-white page-text">&laquo First</a>
+      <li class="page-item bg-dark "><a href="?page=1" class="page-link bg-dark text-white page-text">&laquoFirst</a>
       </li>
       <li class="page-item page-text "><a href="?page={{ stories.previous_page_number }}"
           class="page-link bg-dark text-white">Previous</a></li>
