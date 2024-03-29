@@ -6,6 +6,14 @@ from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 
 
+def error_view500(request, exception=None):
+    return render(request, "stories/500.html", {})
+
+
+def error_view404(request, exception):
+    return render(request, "stories/404.html", {})
+
+
 # Create Story
 def create_story(request):
     submitted = False
