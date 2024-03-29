@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<body>
+
   {% if user.is_authenticated %}
   <!-- Logged in landing page -->
   <div class="hero-book"
@@ -66,15 +66,14 @@
       style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711583591/hero-book2_v28m5h.png);">
       <div class="card text-center mb-3 mx-auto p-2 welcome-card ">
         <div class="card-body d-grid gap-4 col-3 mx-auto">
-          <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Sign&nbspIn</a>
+          <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Sign In</a>
           <br>
-          <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome">Sign&nbspUp</a>
+          <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome">Sign Up</a>
           <br>
           <a href="{% url 'about' %}" class="btn btn-dark btn-welcome">About</a>
         </div>
       </div>
       {% endif %}
     </div>
-</body>
 
 {% endblock %}

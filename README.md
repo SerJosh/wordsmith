@@ -737,6 +737,7 @@ The key areas I would like to add to the site in the future are:
 #### HTML
 
 All the pages were tested at the [W3C Markup Validation Service](https://validator.w3.org/).
+all include base.html
 
 index.html
 
@@ -751,8 +752,6 @@ edit_story.html
 500.html
 
 404.html
-
-base.html
 
 email_confirm.html
 

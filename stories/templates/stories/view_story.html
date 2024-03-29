@@ -7,7 +7,7 @@
 
 <body>
     <div class="read-div">
-        <h1><strong>{{ story_view.title }}</strong></h1>
+        <h2><strong>{{ story_view.title }}</strong></h2>
         {% if "placeholder" in story_view.story_cover.url %}
         <img class="img-fluid" src="{% static 'images/book.png' %}" alt="placeholder image">
         {% else %}
