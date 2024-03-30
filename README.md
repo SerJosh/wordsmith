@@ -759,9 +759,9 @@ no errors detected
 
 view_story.html
 
-![view_story.html](documentation/!!!!!!)
+![view_story.html](documentation/read-check.png)
 
-!!!!!!!
+no errors detected
 
 edit_story.html
 
@@ -769,15 +769,19 @@ edit_story.html
 
 500.html
 
-![500.html](documentation/!!!!!)
+![500.html](documentation/500-check1.png)
 
-!!!!!!
+![500.html](documentation/500-check2.png)
+
+2 errors detected, When i tried to use a url link from heroku to check validation of 500.html, it only showed code from the index page, therefore i took the code out of the 500.html page and put it directly into the validator bringing up a doctype error which is already in the base.html of the code and element head missing which is also in the base.html which is in its code already. I could not find any other solution yet it all checks out to have no errors in its code.
 
 404.html
 
-![404.html](documentation/!!!!!)
+![404.html](documentation/404-check1.png)
 
-!!!!!!!
+![404.html](documentation/404-check2.png)
+
+2 errors detected, When i tried to use a url link from heroku to check validation of 404.html, it only showed code from the index page, therefore i took the code out of the 404.html page and put it directly into the validator bringing up a doctype error which is already in the base.html of the code and element head missing which is also in the base.html which is in its code already. I could not find any other solution yet it all checks out to have no errors in its code.
 
 email_confirm.html
 
