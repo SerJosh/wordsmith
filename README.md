@@ -728,7 +728,7 @@ There are several items of functionality that I would like to add in the future,
 The key areas I would like to add to the site in the future are:
 * The ability to post your own stories after completion to the global stories page
 * The ability for users to have their own profile where they can edit, delete account and give a bio about themselves.
-* The ability for users to like and comment on other users stories..
+* The ability for users to like and comment on other users stories.
 
 ## Testing
 
@@ -741,60 +741,224 @@ all include base.html
 
 index.html
 
+![index.html](documentation/index-check.png)
+
+no errors detected
+
 about.html
+
+![about.html](documentation/about-check.png)
+
+no errors detected
 
 create_story.html
 
+![create_story.html](documentation/create-check.png)
+
+no errors detected
+
 view_story.html
+
+![view_story.html](documentation/!!!!!!)
+
+!!!!!!!
 
 edit_story.html
 
+![edit_story.html](documentation/edit-check.png)
+
 500.html
+
+![500.html](documentation/!!!!!)
+
+!!!!!!
 
 404.html
 
+![404.html](documentation/!!!!!)
+
+!!!!!!!
+
 email_confirm.html
+
+![email_confirm.html](documentation/!!!!!!)
+
+!!!!!!!
 
 login.html
 
+![login.html](documentation/login-check.png)
+
+no errors detected
+
 logout.html
+
+![logout.html](documentation/sign-out-check.png)
+
+no errors detected
 
 password_reset_done.html
 
+![password_reset_done.html](documentation/!!!!!!)
+
+!!!!!!
+
 password_reset_from_key_done.html
+
+![password_reset_from_key_done.html](documentation/!!!!!!)
+
+!!!!!!!
 
 password_reset_from_key.html
 
+![password_reset_from_key.html](documentation/!!!!!!!)
+
+!!!!!!!
+
 password_reset.html
+
+![password_reset.html](documentation/!!!!!!)
+
+!!!!!!!
 
 signup.html
 
+![signup.html](documentation/sign-up1-check.png)
+
+![signup.html](documentation/sign-up2-check.png)
+
+4 errors detected, I could not change the {{ form as p }} in the django allauth template as I did not know how and that is where the errors lay, also I could not understand why there was an error as the span was closed as well as the other elements.
+
 verification_sent.html
 
+![verification_sent.html](documentation/!!!!!!)
+
+!!!!!!
+
 verified_email_required.html
+
+![verified_email_required.html](documentation/!!!!!!)
+
+!!!!!!
 
 
 #### CSS
 
 The CSS code was tested at [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 
+![css validation](documentation/css-check.png)
+
+No errors were found in the style.css file
+
 #### JavaScript
 
-All three JavaScript files were validated through [JSHint](https://jshint.com/).
+The JavaScript file was validated through [JSHint](https://jshint.com/).
+
+![js hint validation](documentation/js-check.png)
+
+No errors were found in the script.js file
 
 #### Python
 
 All Python files have been validated through [CI Python Linter](https://pep8ci.herokuapp.com/)
 
-### Lighthouse
+##### Stories
 
-#### Index page
 
-#### Create story page
+admin.py
 
-#### Login page
+![admin.py](documentation/admin-p-check.png)
+
+
+forms.py
+
+![forms.py](documentation/forms-p-check.png)
+
+
+models.py
+
+![models.py](documentation/models-p-check.png)
+
+
+urls.py
+
+![urls.py](documentation/url-stories-check.png)
+
+
+views.py
+
+![views.py](documentation/views-check.png)
 
 ### Manual Testing
+
+#### Navigation bar
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Home link (Wordsmith logo) | When clicked directs the user to the landing page | Click on “wordsmith” logo | Got directed to landing page | Pass |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+About link
+
+When clicked directs the user to the about page
+
+“Click on about”
+
+Got directed to the about page
+
+Pass
+
+
+Sign-in link
+
+When clicked directs the user to the sign-in page
+
+Click on “sign-in”
+
+Got directed to the sign-in page
+
+Pass
+
+
+Sign-up
+
+When clicked directs the user to the sign-up page
+
+Click on “sign-up”
+
+Got directed to the sign-up page
+
+Pass
+
+
+User login status
+
+When user is not signed in, displays as “you are not logged in”
+
+Check login status when not logged in
+
+Displays as “you are not logged in”
+
+Pass
+
 
 ### Bugs
 

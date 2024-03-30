@@ -5,21 +5,21 @@
 {% block content %}
 <!-- View Story content -->
 
-<body>
-    <div class="read-div">
-        <h2><strong>{{ story_view.title }}</strong></h2>
-        {% if "placeholder" in story_view.story_cover.url %}
-        <img class="img-fluid" src="{% static 'images/book.png' %}" alt="placeholder image">
-        {% else %}
-        <img src="{{ story_view.story_cover.url }}" class="img-fluid" alt="Story cover">
-        {% endif %}
-        <h3>By {{ story_view.auther }}</h3>
-        <br><br>
-        <p class="text-break"><strong>{{ story_view.blurb }}</strong></p>
-        <br>
-        <p class="text-break">{{ story_view.content | safe  }}</p>
-        <a class="btn btn-dark btn-welcome bg-dark" href="{% url 'index' %}">Back</a>
-    </div>
-</body>
+
+<div class="read-div">
+    <h2><strong>{{ story_view.title }}</strong></h2>
+    {% if "placeholder" in story_view.story_cover.url %}
+    <img class="img-fluid" src="{% static 'images/book.png' %}" alt="placeholder image">
+    {% else %}
+    <img src="{{ story_view.story_cover.url }}" class="img-fluid" alt="Story cover">
+    {% endif %}
+    <h3>By {{ story_view.auther }}</h3>
+    <br><br>
+    <p class="text-break"><strong>{{ story_view.blurb }}</strong></p>
+    <br>
+    <p class="text-break">{{ story_view.content | safe  }}</p>
+    <a class="btn btn-dark btn-welcome bg-dark" href="{% url 'index' %}">Back</a>
+</div>
+
 
 {% endblock %}

@@ -21,15 +21,15 @@ def create_story(request):
         form = StoryForm(request.POST, request.FILES)
         if form.is_valid():
             story = form.save(commit=False)
-            story.auther = request.user  
+            story.auther = request.user
             story.save()
             return HttpResponseRedirect('/create_story?submitted=True')
     else:
         form = StoryForm
         if 'submitted' in request.GET:
             submitted = True
-    return render(request, 'stories/create_story.html', 
-    {'form': form, 'submitted': submitted})
+    return render(request, 'stories/create_story.html',
+                  {'form': form, 'submitted': submitted})
 
 
 # Delete Story
@@ -42,21 +42,22 @@ def delete_story(request, story_id):
 # Edit Story
 def edit_story(request, story_id):
     story_edit = Story.objects.get(pk=story_id)
-    form = StoryForm(request.POST or None,request.FILES or None, instance=story_edit)
+    form = StoryForm(
+        request.POST or None, request.FILES or None, instance=story_edit)
     if form.is_valid():
-            form.save()
-            return redirect('index')
-    return render(request, 'stories/edit_story.html', 
-    {'story_edit': story_edit,
-    'form': form})
+        form.save()
+        return redirect('index')
+    return render(request, 'stories/edit_story.html',
+                  {'story_edit': story_edit,
+                   'form': form})
 
 
 # Read Story
 def view_story(request, story_id):
     story_view = Story.objects.get(pk=story_id)
     print(story_view.auther)
-    return render(request, 'stories/view_story.html', 
-    {'story_view': story_view})
+    return render(request, 'stories/view_story.html',
+                  {'story_view': story_view})
 
 
 # See all Stories
@@ -66,9 +67,9 @@ def all_stories(request):
     p = Paginator(Story.objects.all(), 1)
     page = request.GET.get('page')
     stories = p.get_page(page)
-    return render(request, 'stories/index.html', 
-    {'story_list': story_list,
-    'stories': stories,})
+    return render(request, 'stories/index.html',
+                  {'story_list': story_list,
+                   'stories': stories, })
 
 
 # Go to Stories page
@@ -79,6 +80,7 @@ def index(request):
 # Go to About page
 def about(request):
     return render(request, 'stories/about.html', {})
+
 
 
 
