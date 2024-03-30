@@ -1102,7 +1102,7 @@ Manual testing was done for the thesting of the website
 #### Packages Used
 
 * Gitpod was used to develop the site
-* Cloudinary was used for the storingg of images and css when deployed to heroku
+* Cloudinary was used for the storing of images and css when deployed to heroku
 * GitHub was utilised for storing the files for this project
 * Balsamiq was utilised to develop wireframes for the site from which the design was based
 
