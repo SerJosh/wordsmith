@@ -846,9 +846,17 @@ No errors were found in the style.css file
 
 The JavaScript file was validated through [JSHint](https://jshint.com/).
 
-![js hint validation](documentation/js-check.png)
+I had a bit of a problem with the javacript testing on JS hint, I could either be left with 2 undefined variables, with no issues in the console... or no issues but a uncaught type error in the console. It all depended on how I went at my javascript code, I thought I might just bring that to your attension so I went with having two unused variables in the JS hint validation, images of what happened are down below
 
-No errors were found in the script.js file
+JS Hint Validation
+![js hint validation](documentation/js-error3.png)
+
+The code for the uncaught type error
+![js hint validation](documentation/js-error2.png)
+
+and the outcome of the code above
+![js hint validation](documentation/js-check.png)
+![js hint validation](documentation/js-error1.png)
 
 #### Python
 
@@ -1102,12 +1110,13 @@ Manual testing was done for the thesting of the website
 
 * [Codemycom](https://www.youtube.com/@Codemycom)'s Django Wednesdays was used for a guideline on how to go about the project creation and its essentials. This is the [repository](https://github.com/flatplanet/Django-Club-Youtube-Playlist)
 * [the-pantry](https://github.com/MattBCoding/pp4-the-pantry) by mattB (my mentor) was used for a guideline on how to go about the projects scope and finer details and the structure of the readme file.
+* [frisa-booking](https://github.com/FridaWikell/frisa-booking) by fridawikell for guidance on how to go at the readme file.
 * The Code Institute reference material was used as a general reference for things that I had previously done during the course.
 * All other resources I have gone through during this course, from stack overflow to reddit, i could not name them all.
 
 ## Deployment
 
-The site was deployed via Heroku, and the live link can be found here - [The Pantry](https://pp4-the-pantry.herokuapp.com/)
+The site was deployed via Heroku, and the live link can be found here -[Wordmith](https://wordsmith-fafcef7f3870.herokuapp.com/)
 
 ### Project Deployment
 
