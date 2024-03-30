@@ -5,75 +5,75 @@
 {% block content %}
 
 
-  {% if user.is_authenticated %}
-  <!-- Logged in landing page -->
-  <div class="hero-book"
+{% if user.is_authenticated %}
+<!-- Logged in landing page -->
+<div class="hero-book"
+  style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711583591/hero-book2_v28m5h.png);">
+  <h1 class="text-center text-white">Stories</h1>
+  {% for story in stories %}
+  <!-- Story Cards -->
+  <div class=" mx-auto big-story-card">
+    <div class="card story-card">
+      <div class="card-body card-align">
+        <h5 class="card-title">{{ story.title }} </h5>
+        <p>By {{ story.auther }}</p>
+      </div>
+      {% if "placeholder" in story.story_cover.url %}
+      <img class="card-img-placeholder mx-auto" src="{% static 'images/book.png' %}" alt="placeholder image">
+      {% else %}
+      <img class="card-img-top mx-auto" src=" {{ story.story_cover.url }}" alt="{{ story.title }}">
+      {% endif %}
+      <div class="card-body mx-auto">
+        <p class="card-text text-break text-blurb">{{ story.blurb }}</p>
+      </div>
+      <div id="show-delete" class="card-body mx-auto">
+        <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
+        {% if user == story.auther %}
+        <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
+        <button id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
+      </div>
+      <div id="hide" class="hidden-defence">
+        <p>Are you Sure?</p>
+        <a href="{% url 'delete-story' story.id %}" class=" btn btn-dark btn-welcome">Delete</a>
+        <a href="#" id="cancelor" class=" btn btn-dark btn-welcome">Cancel</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+  <!-- Paginator -->
+  <ul class="pagination justify-content-center paginator">
+    {% if stories.has_previous %}
+    <li class="page-item bg-dark "><a href="?page=1" class="page-link bg-dark text-white page-text">&laquoFirst</a>
+    </li>
+    <li class="page-item page-text "><a href="?page={{ stories.previous_page_number }}"
+        class="page-link bg-dark text-white">Previous</a></li>
+    {% endif %}
+    <li class="page-item disabled page-text"><a href="#" class="page-link bg-dark text-white">
+        Page {{ stories.number }} of {{ stories.paginator.num_pages }}
+      </a></li>
+    {% if stories.has_next %}
+    <li class="page-item page-text"><a href="?page={{ stories.next_page_number }}"
+        class="page-link bg-dark text-white">Next</a>
+    </li>
+    <li class="page-item "></li><a href="?page={{ stories.paginator.num_pages }}"
+      class="page-link bg-dark text-white page-text">Last &raquo</a></li>
+    {% endif %}
+  </ul>
+  {% else %}
+  <!-- Logged out landing page -->
+  <div class="container-fluid hero-book"
     style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711583591/hero-book2_v28m5h.png);">
-    <h1 class="text-center text-white">Stories</h1>
-    {% for story in stories %}
-    <!-- Story Cards -->
-    <div class=" mx-auto big-story-card">
-      <div class="card story-card">
-        <div class="card-body card-align">
-          <h5 class="card-title">{{ story.title }} </h5>
-          <p>By {{ story.auther }}</p>
-        </div>
-        {% if "placeholder" in story.story_cover.url %}
-        <img class="card-img-placeholder mx-auto" src="{% static 'images/book.png' %}" alt="placeholder image">
-        {% else %}
-        <img class="card-img-top mx-auto" src=" {{ story.story_cover.url }}" alt="{{ story.title }}">
-        {% endif %}
-        <div class="card-body mx-auto">
-          <p class="card-text text-break text-blurb">{{ story.blurb }}</p>
-        </div>
-        <div id="show-delete" class="card-body mx-auto">
-          <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
-          {% if user == story.auther %}
-          <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
-          <button id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
-          {% endif %}
-        </div>
-        <div id="hide" class="hidden-defence">
-          <p>Are you Sure?</p>
-          <a href="{% url 'delete-story' story.id %}" class=" btn btn-dark btn-welcome">Delete</a>
-          <a href="#" id="cancelor" class=" btn btn-dark btn-welcome">Cancel</a>
-        </div>
+    <div class="card text-center mb-3 mx-auto p-2 welcome-card ">
+      <div class="card-body d-grid gap-4 col-3 mx-auto">
+        <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Sign In</a>
+        <br>
+        <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome">Sign Up</a>
+        <br>
+        <a href="{% url 'about' %}" class="btn btn-dark btn-welcome">About</a>
       </div>
     </div>
-    {% endfor %}
-    <!-- Paginator -->
-    <ul class="pagination justify-content-center paginator">
-      {% if stories.has_previous %}
-      <li class="page-item bg-dark "><a href="?page=1" class="page-link bg-dark text-white page-text">&laquoFirst</a>
-      </li>
-      <li class="page-item page-text "><a href="?page={{ stories.previous_page_number }}"
-          class="page-link bg-dark text-white">Previous</a></li>
-      {% endif %}
-      <li class="page-item disabled page-text"><a href="#" class="page-link bg-dark text-white">
-          Page {{ stories.number }} of {{ stories.paginator.num_pages }}
-        </a></li>
-      {% if stories.has_next %}
-      <li class="page-item page-text"><a href="?page={{ stories.next_page_number }}"
-          class="page-link bg-dark text-white">Next</a>
-      </li>
-      <li class="page-item "></li><a href="?page={{ stories.paginator.num_pages }}"
-        class="page-link bg-dark text-white page-text">Last &raquo</a></li>
-      {% endif %}
-    </ul>
-    {% else %}
-    <!-- Logged out landing page -->
-    <div class="container-fluid hero-book"
-      style="background-image: url(https://res.cloudinary.com/dkbfmfd5z/image/upload/v1711583591/hero-book2_v28m5h.png);">
-      <div class="card text-center mb-3 mx-auto p-2 welcome-card ">
-        <div class="card-body d-grid gap-4 col-3 mx-auto">
-          <a href="{% url 'account_login' %}" class="btn btn-dark btn-welcome">Sign In</a>
-          <br>
-          <a href="{% url 'account_signup' %}" class="btn btn-dark btn-welcome">Sign Up</a>
-          <br>
-          <a href="{% url 'about' %}" class="btn btn-dark btn-welcome">About</a>
-        </div>
-      </div>
-      {% endif %}
-    </div>
+    {% endif %}
+  </div>
 
-{% endblock %}
+  {% endblock %}

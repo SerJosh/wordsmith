@@ -983,6 +983,7 @@ Manual testing was done for the thesting of the website
 | stories button in successfully created displayed notification | takes you back to stories page | click on stories button | sent back to stories page | pass |
 | content created is correctly displayed in read story page | Title, blurb, cover, auther (username), story | click on read and check content | displays all details | pass |
 | text break | text is broken even if user does not break text | make one long word(can be over 20 letters) | text is broken | pass |
+| back button | back button takes you back to stories page | click on back button | taken back to stories page | pass |
 
 
 #### Edit story page
@@ -993,6 +994,7 @@ Manual testing was done for the thesting of the website
 | Title field and content field, cover and blurb have original content | allows you to know what has already been written/typed | click on edit and check content | original content is revealed | pass |
 | all fields allow change of text, image | allows you to edit content | edit each field and click edit | content is edited and displayed suit on view story page | pass |
 | text break | text is broken even if user does not break text | make one long word(can be over 20 letters) | text is broken | pass |
+| back button | back button takes you back to stories page | click on back button | taken back to stories page | pass |
 
 
 #### 500.html page
@@ -1052,74 +1054,11 @@ Manual testing was done for the thesting of the website
 | Redirected | When the "password reset" button is pressed, the user gets redirected to the page they visited before | Visit change sign in page page, click reset password| The user got redirected to password reset page | Pass |
 | email confirmation | when resseting password, email verifcation is sent | reset password and check if recieved email | recieved email | pass |
 
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Bugs
+* when given a large image and a large content of text in the blurb, the paginator dips into the footer a bit on some larger screens
+* longer images given as covers may be distorted due to a 200 by 200 picture frame
+* othe noticable bugs are to do with media uploads, being videos or large sized images uploaded by phones, yet the 500.html page catches those errors.
+* There is no notifiaction or statement if there are no stories on the site
 
 ## Technologies and Resources Used
 
@@ -1223,4 +1162,9 @@ Link to deployed website: [Wordsmith](https://wordsmith-fafcef7f3870.herokuapp.c
 ### Acknowledgements
 
 I'd like to thank the following:
+* Jesus Christ my saviour, for getting me through the hard times and the even more difficult periods, giving me the strength to pull through even though I just wanted to give up.
+* My wife and son, for their full support on my long nights
+* My mentor matt, for his expertice and guidance
+* Tutors Roo and Roman, for guiding me in the right direction
+* And to you Code Institute, for giving me a chance to achieve my dream, i thank you
 
