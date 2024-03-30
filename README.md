@@ -803,27 +803,27 @@ no errors detected
 
 password_reset_done.html
 
-![password_reset_done.html](documentation/!!!!!!)
+![password_reset_done.html](documentation/pswrd-done.png)
 
-!!!!!!
+no errors detected
 
 password_reset_from_key_done.html
 
-![password_reset_from_key_done.html](documentation/!!!!!!)
+![password_reset_from_key_done.html](documentation/documentation/pswrd-done.png)
 
-!!!!!!!
+no errors detected
 
 password_reset_from_key.html
 
-![password_reset_from_key.html](documentation/!!!!!!!)
+![password_reset_from_key.html](documentation/passwrd-reset-check.png)
 
-!!!!!!!
+no errors detected
 
 password_reset.html
 
-![password_reset.html](documentation/!!!!!!)
+![password_reset.html](documentation/passwrd-reset-check.png)
 
-!!!!!!!
+no errors detected
 
 signup.html
 
@@ -910,6 +910,8 @@ no errors detected
 
 ### Manual Testing
 
+Manual testing was done for the thesting of the website
+
 #### Navigation bar
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
@@ -932,6 +934,82 @@ no errors detected
 | Github link | When github icon is clicked, it takes you to the github website on a separate page | Click on github icon and inspect if taken to a separate github page | Takes you to a seperate github page | Pass |
 
 
+#### Stories page (unauthenicated)
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass |
+| sign-in, sign-up, about buttons | when clicked, takes you to desired page | click on eack button and check if taken to correct page | Takes user to each page respectively | Pass |
+
+#### Stories page (authenicated)
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass |
+| Read button | when clicked, takes you to view story page | click on read button and check if taken to view story page | Takes user to view story page | Pass |
+| Edit button | when clicked, takes you to view edit page | click on edit button and check if taken to edit story page | Takes user to edit story page | Pass |
+| Delete button | when clicked, takes you to a warning confirmation | click on delete button and check if taken to warning confirmation | Takes user to warning confirmation | Pass |
+| warning confirmation (delete) | when asked, it displays delete or cancel | click on delete button and check if story is deleted | story is deleted | Pass |
+| warning confirmation (cancel) | when asked, it displays delete or cancel | click on cancel button and check if deletion is cancelled | story is deletion is cancelled | Pass |
+| other users stories | when looking at someones story card, you cant edit or delete | click on someones story card and see if you can edit or delete | user cant edit or delete | Pass |
+| pagination display | check if each button prevuios, next, page number, first and last display accordingly | create one story check if just page 1 shows, create two three stories, check if prev, next and page number diplay, create three stories, check if prevuios, next, page number, first and last display | all displays accordingly | Pass |
+
+#### About page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| Back button | taked you back to index.html page | click on back button and check if takes you back to index.html page | takes you back to index.html page | pass |
+
+#### Read story page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| Back button | takes you back to stories page | click on back button and check if takes you back to stories page | takes you back to stories page | pass |
+| auther name | user name is displayed as auther name | check if it dipalys by (user name) | displays user name | pass |
+
+#### Create story page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| Title field and content field are mandetory | disallows you to create if feilds are not typed in | leave blank and create | reverts back to title or story field | pass |
+| all fields allow text | allows you to type in them | type in each field | text is seen | pass |
+| upload image | allows you to add an image | add an image | image name is shown | pass |
+| faulty image/media | sends you to 500.html page | add faulty image/media | sent to 500.html page | pass |
+| create button | gives you a verification of successfully created | create story and click create | verification of successfully created displayed | pass |
+| stories button in successfully created displayed notification | takes you back to stories page | click on stories button | sent back to stories page | pass |
+| content created is correctly displayed in read story page | Title, blurb, cover, auther (username), story | click on read and check content | displays all details | pass |
+| text break | text is broken even if user does not break text | make one long word(can be over 20 letters) | text is broken | pass |
+
+
+#### Edit story page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| Title field and content field, cover and blurb have original content | allows you to know what has already been written/typed | click on edit and check content | original content is revealed | pass |
+| all fields allow change of text, image | allows you to edit content | edit each field and click edit | content is edited and displayed suit on view story page | pass |
+| text break | text is broken even if user does not break text | make one long word(can be over 20 letters) | text is broken | pass |
+
+
+#### 500.html page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| fallback page for error 500| run error that will give you error 500 to check if page displays | add a video media to image in create/edit story| 500.html template is displayed | pass |
+
+#### 404.html page
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass
+| fallback page for error 404| run error that will give you error 404 to check if page displays | add random letters to the url link in url bar| 404.html template is displayed | pass |
+
+
 #### Allauth pages
 
 ##### Sign up page
@@ -939,9 +1017,10 @@ no errors detected
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
-| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass |
 | All fields required | An error message appears when the user tries to sign up but leaves one field empty | Leave one field empty one by one and try to Sign Up | An error message appeared when a field was left empty | Pass |
-| Redirected | When the "Sign Up" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign up, fill out all required fields, press "Sign Up" button | The user got redirected to Booking page | Pass |
+| Redirected | When the "Sign Up" button is pressed, the user gets redirected to the page they visited before, but in the authenticated section | Click Sign up, fill out all required fields, press "Sign Up" button | The user got redirected to the autheniticated index page | Pass |
+| email confirmation | when signed up, email verifcation is sent | sign up and check if recieved email | recieved email | pass |
 
 
 ##### Sign in page
@@ -949,10 +1028,10 @@ no errors detected
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
-| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass |
 | All fields required | An error message appears when the user tries to sign in but leaves one field empty | Leave one field empty one by one and try to Sign In | An error message appeared when a field was left empty | Pass |
 | Sign In button | When the "Sign In" button is pressed, the user gets signed in | Click at "Sign In" button | The user gets signed in | Pass |
-| Redirected | When the "Sign In" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign in, press "Sign In" button | The user got redirected to Booking page | Pass |
+| Redirected | When the "Sign In" button is pressed, the user gets redirected to the page they visited before | index.html authenticatted page, click Sign in, press "Sign In" button | The user got redirected to index.html authenticatted page | Pass |
 
 ##### Sign out page
 
@@ -962,6 +1041,16 @@ no errors detected
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Sign Out button | When the "Sign Out" button is pressed, the user gets signed out | Click at "Sign Out" button | The user gets signed out | Pass |
 | Redirected | When the "Sign Out" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign out, press "Sign Out" button | The user got redirected to Booking page | Pass |
+
+##### Password reset page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different media query breakpoints | The text is readable at all breakpoints | Pass |
+| password reset button | When the "password reset" button is pressed, the user gets confirmation of a password reset action | Click at "password reset" button | The user gets confirmation of a password reset action | Pass |
+| Redirected | When the "password reset" button is pressed, the user gets redirected to the page they visited before | Visit change sign in page page, click reset password| The user got redirected to password reset page | Pass |
+| email confirmation | when resseting password, email verifcation is sent | reset password and check if recieved email | recieved email | pass |
 
 
 
