@@ -30,13 +30,13 @@
           <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
           {% if user == story.auther %}
           <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
-          <button id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
+          <button onclick="displayDelete()" class=" btn btn-dark btn-welcome">Delete</button>
           {% endif %}
         </div>
         <div id="hide" class="hidden-defence">
           <p>Are you Sure?</p>
           <a href="{% url 'delete-story' story.id %}" class=" btn btn-dark btn-welcome">Delete</a>
-          <a href="#" id="cancelor" class=" btn btn-dark btn-welcome">Cancel</a>
+          <a href="#" onclick="cancelDelete()" class=" btn btn-dark btn-welcome">Cancel</a>
         </div>
       </div>
     </div>

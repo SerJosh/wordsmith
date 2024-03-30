@@ -785,9 +785,9 @@ edit_story.html
 
 email_confirm.html
 
-![email_confirm.html](documentation/!!!!!!)
+![email_confirm.html](documentation/confirm-email-check.png)
 
-!!!!!!!
+no errors detected
 
 login.html
 
@@ -873,25 +873,40 @@ admin.py
 
 ![admin.py](documentation/admin-p-check.png)
 
+no errors detected
+
 
 forms.py
 
 ![forms.py](documentation/forms-p-check.png)
 
+no errors detected
 
 models.py
 
 ![models.py](documentation/models-p-check.png)
 
+no errors detected
 
 urls.py
 
 ![urls.py](documentation/url-stories-check.png)
 
+no errors detected
 
 views.py
 
 ![views.py](documentation/views-check.png)
+
+no errors detected
+
+##### Wordsmith
+
+urls.py
+
+![urls.py](documentation/url-word-check.png)
+
+no errors detected
 
 ### Manual Testing
 
@@ -900,13 +915,64 @@ views.py
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Home link (Wordsmith logo) | When clicked directs the user to the landing page | Click on “wordsmith” logo | Got directed to landing page | Pass |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| About link | When clicked directs the user to the about page | “Click on about” | Got directed to the about page | Pass |
+| Sign-in link | When clicked directs the user to the sign-in page | Click on “sign-in” | Got directed to the sign-in page | Pass |
+| Sign-up | When clicked directs the user to the sign-up page | Click on “sign-up” | Got directed to the sign-up page | Pass |
+| User login status | When user is not signed in, displays as “you are not logged in” | Check login status when not logged in | Displays as “you are not logged in” | Pass |
+| Create link not visible (signed-out user) | Create link not visible as a signed out user | Sign-out and inspect navigation bar | Create link not visible | Pass |
+| Sign-out link not visible (signed-out user) | sign-out link not visible as a signed out user | Sign-out and inspect navigation bar | sign-up link not visible | Pass |
+| Stories, Create, About, Sign-up, Sign-in, Sign-out link hover effect | Respective links in nav bar has “active” effect when on respective pages | Click on respective link and inspect the respective link “active” effect | Respective link has active effect | Pass |
+
+
+#### Footer
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Goodreads link | When goodreads icon is clicked, it takes you to the goodreads website on a separate page | Click on goodreads icon and inspect if taken to a separate goodreads page | Takes you to a seperate goodreads page | Pass |
+| Github link | When github icon is clicked, it takes you to the github website on a separate page | Click on github icon and inspect if taken to a separate github page | Takes you to a seperate github page | Pass |
+
+
+#### Allauth pages
+
+##### Sign up page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| All fields required | An error message appears when the user tries to sign up but leaves one field empty | Leave one field empty one by one and try to Sign Up | An error message appeared when a field was left empty | Pass |
+| Redirected | When the "Sign Up" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign up, fill out all required fields, press "Sign Up" button | The user got redirected to Booking page | Pass |
+
+
+##### Sign in page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| All fields required | An error message appears when the user tries to sign in but leaves one field empty | Leave one field empty one by one and try to Sign In | An error message appeared when a field was left empty | Pass |
+| Sign In button | When the "Sign In" button is pressed, the user gets signed in | Click at "Sign In" button | The user gets signed in | Pass |
+| Redirected | When the "Sign In" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign in, press "Sign In" button | The user got redirected to Booking page | Pass |
+
+##### Sign out page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| Sign Out button | When the "Sign Out" button is pressed, the user gets signed out | Click at "Sign Out" button | The user gets signed out | Pass |
+| Redirected | When the "Sign Out" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign out, press "Sign Out" button | The user got redirected to Booking page | Pass |
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 
@@ -920,48 +986,48 @@ views.py
 
 
 
-About link
-
-When clicked directs the user to the about page
-
-“Click on about”
-
-Got directed to the about page
-
-Pass
 
 
-Sign-in link
-
-When clicked directs the user to the sign-in page
-
-Click on “sign-in”
-
-Got directed to the sign-in page
-
-Pass
 
 
-Sign-up
-
-When clicked directs the user to the sign-up page
-
-Click on “sign-up”
-
-Got directed to the sign-up page
-
-Pass
 
 
-User login status
 
-When user is not signed in, displays as “you are not logged in”
 
-Check login status when not logged in
 
-Displays as “you are not logged in”
 
-Pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Bugs

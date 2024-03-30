@@ -1,4 +1,3 @@
-
 from django.contrib import admin
 from django.urls import path, include
 from stories.views import index
@@ -11,13 +10,12 @@ handler500 = 'stories.views.error_view500'
 handler404 = 'stories.views.error_view404'
 
 
-
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('create_story/', create_story, name='create_story'),
     path('summernote/', include('django_summernote.urls')),
-    path('', include('stories.urls'), name="stories-urls"),  
+    path('', include('stories.urls'), name="stories-urls"),
 ]
 
 
