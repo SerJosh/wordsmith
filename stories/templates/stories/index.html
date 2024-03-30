@@ -28,7 +28,6 @@
       </div>
       <div id="show-delete" class="card-body mx-auto">
         <a href="{% url 'view-story' story.id %}" class="btn btn-dark btn-welcome">Read</a>
-        {% if user == story.auther %}
         <a href="{% url 'edit-story' story.id %}" class="btn btn-dark btn-welcome">Edit</a>
         <button id='deletor' class=" btn btn-dark btn-welcome">Delete</button>
       </div>
@@ -37,7 +36,6 @@
         <a href="{% url 'delete-story' story.id %}" class=" btn btn-dark btn-welcome">Delete</a>
         <a href="#" id="cancelor" class=" btn btn-dark btn-welcome">Cancel</a>
       </div>
-      {% endif %}
     </div>
   </div>
   {% endfor %}

@@ -809,7 +809,7 @@ no errors detected
 
 password_reset_from_key_done.html
 
-![password_reset_from_key_done.html](documentation/documentation/pswrd-done.png)
+![password_reset_from_key_done.html](documentation/pswrd-done.png)
 
 no errors detected
 
@@ -832,18 +832,6 @@ signup.html
 ![signup.html](documentation/sign-up2-check.png)
 
 4 errors detected, I could not change the {{ form as p }} in the django allauth template as I did not know how and that is where the errors lay, also I could not understand why there was an error as the span was closed as well as the other elements.
-
-verification_sent.html
-
-![verification_sent.html](documentation/!!!!!!)
-
-!!!!!!
-
-verified_email_required.html
-
-![verified_email_required.html](documentation/!!!!!!)
-
-!!!!!!
 
 
 #### CSS
@@ -1059,6 +1047,7 @@ Manual testing was done for the thesting of the website
 * longer images given as covers may be distorted due to a 200 by 200 picture frame
 * othe noticable bugs are to do with media uploads, being videos or large sized images uploaded by phones, yet the 500.html page catches those errors.
 * There is no notifiaction or statement if there are no stories on the site
+* PLEASE NOTE!
 
 ## Technologies and Resources Used
 
