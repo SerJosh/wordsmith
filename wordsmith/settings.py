@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [ '8000-serjosh-wordsmith-hts3me9pyj5.ws-eu110.gitpod.io',
-                '.herokuapp.com']
+                'wordsmith.herokuapp.com']
 
 
 # Application definition
